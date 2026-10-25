@@ -1,0 +1,4072 @@
+{
+  "abitare": {
+    "present": [
+      "io abito",
+      "tu abiti",
+      "lui abita",
+      "lei abita",
+      "noi abitiamo",
+      "voi abitate",
+      "loro abitano"
+    ],
+    "past_perfect": [
+      "io ho abitato",
+      "tu hai abitato",
+      "lui ha abitato",
+      "lei ha abitato",
+      "noi abbiamo abitato",
+      "voi avete abitato",
+      "loro hanno abitato"
+    ],
+    "imperfect": [
+      "io abitavo",
+      "tu abitavi",
+      "lui abitava",
+      "lei abitava",
+      "noi abitavamo",
+      "voi abitavate",
+      "loro abitavano"
+    ],
+    "future": [
+      "io abiterò",
+      "tu abiterai",
+      "lui abiterà",
+      "lei abiterà",
+      "noi abiteremo",
+      "voi abiterete",
+      "loro abiteranno"
+    ]
+  },
+  "aiutare": {
+    "present": [
+      "io aiuto",
+      "tu aiuti",
+      "lui aiuta",
+      "lei aiuta",
+      "noi aiutiamo",
+      "voi aiutate",
+      "loro aiutano"
+    ],
+    "past_perfect": [
+      "io ho aiutato",
+      "tu hai aiutato",
+      "lui ha aiutato",
+      "lei ha aiutato",
+      "noi abbiamo aiutato",
+      "voi avete aiutato",
+      "loro hanno aiutato"
+    ],
+    "imperfect": [
+      "io aiutavo",
+      "tu aiutavi",
+      "lui aiutava",
+      "lei aiutava",
+      "noi aiutavamo",
+      "voi aiutavate",
+      "loro aiutavano"
+    ],
+    "future": [
+      "io aiuterò",
+      "tu aiuterai",
+      "lui aiuterà",
+      "lei aiuterà",
+      "noi aiuteremo",
+      "voi aiuterete",
+      "loro aiuteranno"
+    ]
+  },
+  "alzarsi": {
+    "present": [
+      "io mi alzo",
+      "tu ti alzi",
+      "lui si alza",
+      "lei si alza",
+      "noi ci alziamo",
+      "voi vi alzate",
+      "loro si alzano"
+    ],
+    "past_perfect": [
+      "io mi sono alzata",
+      "io mi sono alzato",
+      "tu ti sei alzata",
+      "tu ti sei alzato",
+      "lui si è alzato",
+      "lei si è alzata",
+      "noi ci siamo alzate",
+      "noi ci siamo alzati",
+      "voi vi siete alzate",
+      "voi vi siete alzati",
+      "loro si sono alzate",
+      "loro si sono alzati"
+    ],
+    "imperfect": [
+      "io mi alzavo",
+      "tu ti alzavi",
+      "lui si alzava",
+      "lei si alzava",
+      "noi ci alzavamo",
+      "voi vi alzavate",
+      "loro si alzavano"
+    ],
+    "future": [
+      "io mi alzerò",
+      "tu ti alzerai",
+      "lui si alzerà",
+      "lei si alzerà",
+      "noi ci alzeremo",
+      "voi vi alzerete",
+      "loro si alzeranno"
+    ]
+  },
+  "amare": {
+    "present": [
+      "io amo",
+      "tu ami",
+      "lui ama",
+      "lei ama",
+      "noi amiamo",
+      "voi amate",
+      "loro amano"
+    ],
+    "past_perfect": [
+      "io ho amato",
+      "tu hai amato",
+      "lui ha amato",
+      "lei ha amato",
+      "noi abbiamo amato",
+      "voi avete amato",
+      "loro hanno amato"
+    ],
+    "imperfect": [
+      "io amavo",
+      "tu amavi",
+      "lui amava",
+      "lei amava",
+      "noi amavamo",
+      "voi amavate",
+      "loro amavano"
+    ],
+    "future": [
+      "io amerò",
+      "tu amerai",
+      "lui amerà",
+      "lei amerà",
+      "noi ameremo",
+      "voi amerete",
+      "loro ameranno"
+    ]
+  },
+  "andare": {
+    "present": [
+      "io vado",
+      "tu vai",
+      "lui va",
+      "lei va",
+      "noi andiamo",
+      "voi andate",
+      "loro vanno"
+    ],
+    "past_perfect": [
+      "io sono andata",
+      "io sono andato",
+      "tu sei andata",
+      "tu sei andato",
+      "lui è andato",
+      "lei è andata",
+      "noi siamo andate",
+      "noi siamo andati",
+      "voi siete andate",
+      "voi siete andati",
+      "loro sono andate",
+      "loro sono andati"
+    ],
+    "imperfect": [
+      "io andavo",
+      "tu andavi",
+      "lui andava",
+      "lei andava",
+      "noi andavamo",
+      "voi andavate",
+      "loro andavano"
+    ],
+    "future": [
+      "io andrò",
+      "tu andrai",
+      "lui andrà",
+      "lei andrà",
+      "noi andremo",
+      "voi andrete",
+      "loro andranno"
+    ]
+  },
+  "annusare": {
+    "present": [
+      "io annuso",
+      "tu annusi",
+      "lui annusa",
+      "lei annusa",
+      "noi annusiamo",
+      "voi annusate",
+      "loro annusano"
+    ],
+    "past_perfect": [
+      "io ho annusato",
+      "tu hai annusato",
+      "lui ha annusato",
+      "lei ha annusato",
+      "noi abbiamo annusato",
+      "voi avete annusato",
+      "loro hanno annusato"
+    ],
+    "imperfect": [
+      "io annusavo",
+      "tu annusavi",
+      "lui annusava",
+      "lei annusava",
+      "noi annusavamo",
+      "voi annusavate",
+      "loro annusavano"
+    ],
+    "future": [
+      "io annuserò",
+      "tu annuserai",
+      "lui annuserà",
+      "lei annuserà",
+      "noi annuseremo",
+      "voi annuserete",
+      "loro annuseranno"
+    ]
+  },
+  "aprire": {
+    "present": [
+      "io apro",
+      "tu apri",
+      "lui apre",
+      "lei apre",
+      "noi apriamo",
+      "voi aprite",
+      "loro aprono"
+    ],
+    "past_perfect": [
+      "io ho aperto",
+      "tu hai aperto",
+      "lui ha aperto",
+      "lei ha aperto",
+      "noi abbiamo aperto",
+      "voi avete aperto",
+      "loro hanno aperto"
+    ],
+    "imperfect": [
+      "io aprivo",
+      "tu aprivi",
+      "lui apriva",
+      "lei apriva",
+      "noi aprivamo",
+      "voi aprivate",
+      "loro aprivano"
+    ],
+    "future": [
+      "io aprirò",
+      "tu aprirai",
+      "lui aprirà",
+      "lei aprirà",
+      "noi apriremo",
+      "voi aprirete",
+      "loro apriranno"
+    ]
+  },
+  "arrivare": {
+    "present": [
+      "io arrivo",
+      "tu arrivi",
+      "lui arriva",
+      "lei arriva",
+      "noi arriviamo",
+      "voi arrivate",
+      "loro arrivano"
+    ],
+    "past_perfect": [
+      "io sono arrivata",
+      "io sono arrivato",
+      "tu sei arrivata",
+      "tu sei arrivato",
+      "lui è arrivato",
+      "lei è arrivata",
+      "noi siamo arrivate",
+      "noi siamo arrivati",
+      "voi siete arrivate",
+      "voi siete arrivati",
+      "loro sono arrivate",
+      "loro sono arrivati"
+    ],
+    "imperfect": [
+      "io arrivavo",
+      "tu arrivavi",
+      "lui arrivava",
+      "lei arrivava",
+      "noi arrivavamo",
+      "voi arrivavate",
+      "loro arrivavano"
+    ],
+    "future": [
+      "io arriverò",
+      "tu arriverai",
+      "lui arriverà",
+      "lei arriverà",
+      "noi arriveremo",
+      "voi arriverete",
+      "loro arriveranno"
+    ]
+  },
+  "ascoltare": {
+    "present": [
+      "io ascolto",
+      "tu ascolti",
+      "lui ascolta",
+      "lei ascolta",
+      "noi ascoltiamo",
+      "voi ascoltate",
+      "loro ascoltano"
+    ],
+    "past_perfect": [
+      "io ho ascoltato",
+      "tu hai ascoltato",
+      "lui ha ascoltato",
+      "lei ha ascoltato",
+      "noi abbiamo ascoltato",
+      "voi avete ascoltato",
+      "loro hanno ascoltato"
+    ],
+    "imperfect": [
+      "io ascoltavo",
+      "tu ascoltavi",
+      "lui ascoltava",
+      "lei ascoltava",
+      "noi ascoltavamo",
+      "voi ascoltavate",
+      "loro ascoltavano"
+    ],
+    "future": [
+      "io ascolterò",
+      "tu ascolterai",
+      "lui ascolterà",
+      "lei ascolterà",
+      "noi ascolteremo",
+      "voi ascolterete",
+      "loro ascolteranno"
+    ]
+  },
+  "aspettare": {
+    "present": [
+      "io aspetto",
+      "tu aspetti",
+      "lui aspetta",
+      "lei aspetta",
+      "noi aspettiamo",
+      "voi aspettate",
+      "loro aspettano"
+    ],
+    "past_perfect": [
+      "io ho aspettato",
+      "tu hai aspettato",
+      "lui ha aspettato",
+      "lei ha aspettato",
+      "noi abbiamo aspettato",
+      "voi avete aspettato",
+      "loro hanno aspettato"
+    ],
+    "imperfect": [
+      "io aspettavo",
+      "tu aspettavi",
+      "lui aspettava",
+      "lei aspettava",
+      "noi aspettavamo",
+      "voi aspettavate",
+      "loro aspettavano"
+    ],
+    "future": [
+      "io aspetterò",
+      "tu aspetterai",
+      "lui aspetterà",
+      "lei aspetterà",
+      "noi aspetteremo",
+      "voi aspetterete",
+      "loro aspetteranno"
+    ]
+  },
+  "assaggiare": {
+    "present": [
+      "io assaggio",
+      "tu assaggi",
+      "lui assaggia",
+      "lei assaggia",
+      "noi assaggiamo",
+      "voi assaggiate",
+      "loro assaggiano"
+    ],
+    "past_perfect": [
+      "io ho assaggiato",
+      "tu hai assaggiato",
+      "lui ha assaggiato",
+      "lei ha assaggiato",
+      "noi abbiamo assaggiato",
+      "voi avete assaggiato",
+      "loro hanno assaggiato"
+    ],
+    "imperfect": [
+      "io assaggiavo",
+      "tu assaggiavi",
+      "lui assaggiava",
+      "lei assaggiava",
+      "noi assaggiavamo",
+      "voi assaggiavate",
+      "loro assaggiavano"
+    ],
+    "future": [
+      "io assaggerò",
+      "tu assaggerai",
+      "lui assaggerà",
+      "lei assaggerà",
+      "noi assaggeremo",
+      "voi assaggerete",
+      "loro assaggeranno"
+    ]
+  },
+  "avere": {
+    "present": [
+      "io ho",
+      "tu hai",
+      "lui ha",
+      "lei ha",
+      "noi abbiamo",
+      "voi avete",
+      "loro hanno"
+    ],
+    "past_perfect": [
+      "io ho avuto",
+      "tu hai avuto",
+      "lui ha avuto",
+      "lei ha avuto",
+      "noi abbiamo avuto",
+      "voi avete avuto",
+      "loro hanno avuto"
+    ],
+    "imperfect": [
+      "io avevo",
+      "tu avevi",
+      "lui aveva",
+      "lei aveva",
+      "noi avevamo",
+      "voi avevate",
+      "loro avevano"
+    ],
+    "future": [
+      "io avrò",
+      "tu avrai",
+      "lui avrà",
+      "lei avrà",
+      "noi avremo",
+      "voi avrete",
+      "loro avranno"
+    ]
+  },
+  "bere": {
+    "present": [
+      "io bevo",
+      "tu bevi",
+      "lui beve",
+      "lei beve",
+      "noi beviamo",
+      "voi bevete",
+      "loro bevono"
+    ],
+    "past_perfect": [
+      "io ho bevuto",
+      "tu hai bevuto",
+      "lui ha bevuto",
+      "lei ha bevuto",
+      "noi abbiamo bevuto",
+      "voi avete bevuto",
+      "loro hanno bevuto"
+    ],
+    "imperfect": [
+      "io bevevo",
+      "tu bevevi",
+      "lui beveva",
+      "lei beveva",
+      "noi bevevamo",
+      "voi bevevate",
+      "loro bevevano"
+    ],
+    "future": [
+      "io berrò",
+      "tu berrai",
+      "lui berrà",
+      "lei berrà",
+      "noi berremo",
+      "voi berrete",
+      "loro berranno"
+    ]
+  },
+  "cadere": {
+    "present": [
+      "io cado",
+      "tu cadi",
+      "lui cade",
+      "lei cade",
+      "noi cadiamo",
+      "voi cadete",
+      "loro cadono"
+    ],
+    "past_perfect": [
+      "io sono caduta",
+      "io sono caduto",
+      "tu sei caduta",
+      "tu sei caduto",
+      "lui è caduto",
+      "lei è caduta",
+      "noi siamo cadute",
+      "noi siamo caduti",
+      "voi siete cadute",
+      "voi siete caduti",
+      "loro sono cadute",
+      "loro sono caduti"
+    ],
+    "imperfect": [
+      "io cadevo",
+      "tu cadevi",
+      "lui cadeva",
+      "lei cadeva",
+      "noi cadevamo",
+      "voi cadevate",
+      "loro cadevano"
+    ],
+    "future": [
+      "io cadrò",
+      "tu cadrai",
+      "lui cadrà",
+      "lei cadrà",
+      "noi cadremo",
+      "voi cadrete",
+      "loro cadranno"
+    ]
+  },
+  "calcolare": {
+    "present": [
+      "io calcolo",
+      "tu calcoli",
+      "lui calcola",
+      "lei calcola",
+      "noi calcoliamo",
+      "voi calcolate",
+      "loro calcolano"
+    ],
+    "past_perfect": [
+      "io ho calcolato",
+      "tu hai calcolato",
+      "lui ha calcolato",
+      "lei ha calcolato",
+      "noi abbiamo calcolato",
+      "voi avete calcolato",
+      "loro hanno calcolato"
+    ],
+    "imperfect": [
+      "io calcolavo",
+      "tu calcolavi",
+      "lui calcolava",
+      "lei calcolava",
+      "noi calcolavamo",
+      "voi calcolavate",
+      "loro calcolavano"
+    ],
+    "future": [
+      "io calcolerò",
+      "tu calcolerai",
+      "lui calcolerà",
+      "lei calcolerà",
+      "noi calcoleremo",
+      "voi calcolerete",
+      "loro calcoleranno"
+    ]
+  },
+  "cambiare": {
+    "present": [
+      "io cambio",
+      "tu cambi",
+      "lui cambia",
+      "lei cambia",
+      "noi cambiamo",
+      "voi cambiate",
+      "loro cambiano"
+    ],
+    "past_perfect": [
+      "io ho cambiato",
+      "tu hai cambiato",
+      "lui ha cambiato",
+      "lei ha cambiato",
+      "noi abbiamo cambiato",
+      "voi avete cambiato",
+      "loro hanno cambiato"
+    ],
+    "imperfect": [
+      "io cambiavo",
+      "tu cambiavi",
+      "lui cambiava",
+      "lei cambiava",
+      "noi cambiavamo",
+      "voi cambiavate",
+      "loro cambiavano"
+    ],
+    "future": [
+      "io cambierò",
+      "tu cambierai",
+      "lui cambierà",
+      "lei cambierà",
+      "noi cambieremo",
+      "voi cambierete",
+      "loro cambieranno"
+    ]
+  },
+  "camminare": {
+    "present": [
+      "io cammino",
+      "tu cammini",
+      "lui cammina",
+      "lei cammina",
+      "noi camminiamo",
+      "voi camminate",
+      "loro camminano"
+    ],
+    "past_perfect": [
+      "io ho camminato",
+      "tu hai camminato",
+      "lui ha camminato",
+      "lei ha camminato",
+      "noi abbiamo camminato",
+      "voi avete camminato",
+      "loro hanno camminato"
+    ],
+    "imperfect": [
+      "io camminavo",
+      "tu camminavi",
+      "lui camminava",
+      "lei camminava",
+      "noi camminavamo",
+      "voi camminavate",
+      "loro camminavano"
+    ],
+    "future": [
+      "io camminerò",
+      "tu camminerai",
+      "lui camminerà",
+      "lei camminerà",
+      "noi cammineremo",
+      "voi camminerete",
+      "loro cammineranno"
+    ]
+  },
+  "capire": {
+    "present": [
+      "io capisco",
+      "tu capisci",
+      "lui capisce",
+      "lei capisce",
+      "noi capiamo",
+      "voi capite",
+      "loro capiscono"
+    ],
+    "past_perfect": [
+      "io ho capito",
+      "tu hai capito",
+      "lui ha capito",
+      "lei ha capito",
+      "noi abbiamo capito",
+      "voi avete capito",
+      "loro hanno capito"
+    ],
+    "imperfect": [
+      "io capivo",
+      "tu capivi",
+      "lui capiva",
+      "lei capiva",
+      "noi capivamo",
+      "voi capivate",
+      "loro capivano"
+    ],
+    "future": [
+      "io capirò",
+      "tu capirai",
+      "lui capirà",
+      "lei capirà",
+      "noi capiremo",
+      "voi capirete",
+      "loro capiranno"
+    ]
+  },
+  "cercare": {
+    "present": [
+      "io cerco",
+      "tu cerchi",
+      "lui cerca",
+      "lei cerca",
+      "noi cerchiamo",
+      "voi cercate",
+      "loro cercano"
+    ],
+    "past_perfect": [
+      "io ho cercato",
+      "tu hai cercato",
+      "lui ha cercato",
+      "lei ha cercato",
+      "noi abbiamo cercato",
+      "voi avete cercato",
+      "loro hanno cercato"
+    ],
+    "imperfect": [
+      "io cercavo",
+      "tu cercavi",
+      "lui cercava",
+      "lei cercava",
+      "noi cercavamo",
+      "voi cercavate",
+      "loro cercavano"
+    ],
+    "future": [
+      "io cercherò",
+      "tu cercherai",
+      "lui cercherà",
+      "lei cercherà",
+      "noi cercheremo",
+      "voi cercherete",
+      "loro cercheranno"
+    ]
+  },
+  "chiedere": {
+    "present": [
+      "io chiedo",
+      "tu chiedi",
+      "lui chiede",
+      "lei chiede",
+      "noi chiediamo",
+      "voi chiedete",
+      "loro chiedono"
+    ],
+    "past_perfect": [
+      "io ho chiesto",
+      "tu hai chiesto",
+      "lui ha chiesto",
+      "lei ha chiesto",
+      "noi abbiamo chiesto",
+      "voi avete chiesto",
+      "loro hanno chiesto"
+    ],
+    "imperfect": [
+      "io chiedevo",
+      "tu chiedevi",
+      "lui chiedeva",
+      "lei chiedeva",
+      "noi chiedevamo",
+      "voi chiedevate",
+      "loro chiedevano"
+    ],
+    "future": [
+      "io chiederò",
+      "tu chiederai",
+      "lui chiederà",
+      "lei chiederà",
+      "noi chiederemo",
+      "voi chiederete",
+      "loro chiederanno"
+    ]
+  },
+  "chiudere": {
+    "present": [
+      "io chiudo",
+      "tu chiudi",
+      "lui chiude",
+      "lei chiude",
+      "noi chiudiamo",
+      "voi chiudete",
+      "loro chiudono"
+    ],
+    "past_perfect": [
+      "io ho chiuso",
+      "tu hai chiuso",
+      "lui ha chiuso",
+      "lei ha chiuso",
+      "noi abbiamo chiuso",
+      "voi avete chiuso",
+      "loro hanno chiuso"
+    ],
+    "imperfect": [
+      "io chiudevo",
+      "tu chiudevi",
+      "lui chiudeva",
+      "lei chiudeva",
+      "noi chiudevamo",
+      "voi chiudevate",
+      "loro chiudevano"
+    ],
+    "future": [
+      "io chiuderò",
+      "tu chiuderai",
+      "lui chiuderà",
+      "lei chiuderà",
+      "noi chiuderemo",
+      "voi chiuderete",
+      "loro chiuderanno"
+    ]
+  },
+  "comprare": {
+    "present": [
+      "io compro",
+      "tu compri",
+      "lui compra",
+      "lei compra",
+      "noi compriamo",
+      "voi comprate",
+      "loro comprano"
+    ],
+    "past_perfect": [
+      "io ho comprato",
+      "tu hai comprato",
+      "lui ha comprato",
+      "lei ha comprato",
+      "noi abbiamo comprato",
+      "voi avete comprato",
+      "loro hanno comprato"
+    ],
+    "imperfect": [
+      "io compravo",
+      "tu compravi",
+      "lui comprava",
+      "lei comprava",
+      "noi compravamo",
+      "voi compravate",
+      "loro compravano"
+    ],
+    "future": [
+      "io comprerò",
+      "tu comprerai",
+      "lui comprerà",
+      "lei comprerà",
+      "noi compreremo",
+      "voi comprerete",
+      "loro compreranno"
+    ]
+  },
+  "conoscere": {
+    "present": [
+      "io conosco",
+      "tu conosci",
+      "lui conosce",
+      "lei conosce",
+      "noi conosciamo",
+      "voi conoscete",
+      "loro conoscono"
+    ],
+    "past_perfect": [
+      "io ho conosciuto",
+      "tu hai conosciuto",
+      "lui ha conosciuto",
+      "lei ha conosciuto",
+      "noi abbiamo conosciuto",
+      "voi avete conosciuto",
+      "loro hanno conosciuto"
+    ],
+    "imperfect": [
+      "io conoscevo",
+      "tu conoscevi",
+      "lui conosceva",
+      "lei conosceva",
+      "noi conoscevamo",
+      "voi conoscevate",
+      "loro conoscevano"
+    ],
+    "future": [
+      "io conoscerò",
+      "tu conoscerai",
+      "lui conoscerà",
+      "lei conoscerà",
+      "noi conosceremo",
+      "voi conoscerete",
+      "loro conosceranno"
+    ]
+  },
+  "correre": {
+    "present": [
+      "io corro",
+      "tu corri",
+      "lui corre",
+      "lei corre",
+      "noi corriamo",
+      "voi correte",
+      "loro corrono"
+    ],
+    "past_perfect": [
+      "io ho corso",
+      "tu hai corso",
+      "lui ha corso",
+      "lei ha corso",
+      "noi abbiamo corso",
+      "voi avete corso",
+      "loro hanno corso"
+    ],
+    "imperfect": [
+      "io correvo",
+      "tu correvi",
+      "lui correva",
+      "lei correva",
+      "noi correvamo",
+      "voi correvate",
+      "loro correvano"
+    ],
+    "future": [
+      "io correrò",
+      "tu correrai",
+      "lui correrà",
+      "lei correrà",
+      "noi correremo",
+      "voi correrete",
+      "loro correranno"
+    ]
+  },
+  "costare": {
+    "present": [
+      "io costo",
+      "tu costi",
+      "lui costa",
+      "lei costa",
+      "noi costiamo",
+      "voi costate",
+      "loro costano"
+    ],
+    "past_perfect": [
+      "io ho costato",
+      "tu hai costato",
+      "lui ha costato",
+      "lei ha costato",
+      "noi abbiamo costato",
+      "voi avete costato",
+      "loro hanno costato"
+    ],
+    "imperfect": [
+      "io costavo",
+      "tu costavi",
+      "lui costava",
+      "lei costava",
+      "noi costavamo",
+      "voi costavate",
+      "loro costavano"
+    ],
+    "future": [
+      "io costerò",
+      "tu costerai",
+      "lui costerà",
+      "lei costerà",
+      "noi costeremo",
+      "voi costerete",
+      "loro costeranno"
+    ]
+  },
+  "costruire": {
+    "present": [
+      "io costruisco",
+      "tu costruisci",
+      "lui costruisce",
+      "lei costruisce",
+      "noi costruiamo",
+      "voi costruite",
+      "loro costruiscono"
+    ],
+    "past_perfect": [
+      "io ho costruito",
+      "tu hai costruito",
+      "lui ha costruito",
+      "lei ha costruito",
+      "noi abbiamo costruito",
+      "voi avete costruito",
+      "loro hanno costruito"
+    ],
+    "imperfect": [
+      "io costruivo",
+      "tu costruivi",
+      "lui costruiva",
+      "lei costruiva",
+      "noi costruivamo",
+      "voi costruivate",
+      "loro costruivano"
+    ],
+    "future": [
+      "io costruirò",
+      "tu costruirai",
+      "lui costruirà",
+      "lei costruirà",
+      "noi costruiremo",
+      "voi costruirete",
+      "loro costruiranno"
+    ]
+  },
+  "creare": {
+    "present": [
+      "io creo",
+      "tu crei",
+      "lui crea",
+      "lei crea",
+      "noi creiamo",
+      "voi create",
+      "loro creano"
+    ],
+    "past_perfect": [
+      "io ho creato",
+      "tu hai creato",
+      "lui ha creato",
+      "lei ha creato",
+      "noi abbiamo creato",
+      "voi avete creato",
+      "loro hanno creato"
+    ],
+    "imperfect": [
+      "io creavo",
+      "tu creavi",
+      "lui creava",
+      "lei creava",
+      "noi creavamo",
+      "voi creavate",
+      "loro creavano"
+    ],
+    "future": [
+      "io creerò",
+      "tu creerai",
+      "lui creerà",
+      "lei creerà",
+      "noi creeremo",
+      "voi creerete",
+      "loro creeranno"
+    ]
+  },
+  "credere": {
+    "present": [
+      "io credo",
+      "tu credi",
+      "lui crede",
+      "lei crede",
+      "noi crediamo",
+      "voi credete",
+      "loro credono"
+    ],
+    "past_perfect": [
+      "io ho creduto",
+      "tu hai creduto",
+      "lui ha creduto",
+      "lei ha creduto",
+      "noi abbiamo creduto",
+      "voi avete creduto",
+      "loro hanno creduto"
+    ],
+    "imperfect": [
+      "io credevo",
+      "tu credevi",
+      "lui credeva",
+      "lei credeva",
+      "noi credevamo",
+      "voi credevate",
+      "loro credevano"
+    ],
+    "future": [
+      "io crederò",
+      "tu crederai",
+      "lui crederà",
+      "lei crederà",
+      "noi crederemo",
+      "voi crederete",
+      "loro crederanno"
+    ]
+  },
+  "cucinare": {
+    "present": [
+      "io cucino",
+      "tu cucini",
+      "lui cucina",
+      "lei cucina",
+      "noi cuciniamo",
+      "voi cucinate",
+      "loro cucinano"
+    ],
+    "past_perfect": [
+      "io ho cucinato",
+      "tu hai cucinato",
+      "lui ha cucinato",
+      "lei ha cucinato",
+      "noi abbiamo cucinato",
+      "voi avete cucinato",
+      "loro hanno cucinato"
+    ],
+    "imperfect": [
+      "io cucinavo",
+      "tu cucinavi",
+      "lui cucinava",
+      "lei cucinava",
+      "noi cucinavamo",
+      "voi cucinavate",
+      "loro cucinavano"
+    ],
+    "future": [
+      "io cucinerò",
+      "tu cucinerai",
+      "lui cucinerà",
+      "lei cucinerà",
+      "noi cucineremo",
+      "voi cucinerete",
+      "loro cucineranno"
+    ]
+  },
+  "cuocere": {
+    "present": [
+      "io cuocio",
+      "tu cuoci",
+      "lui cuoce",
+      "lei cuoce",
+      "noi cociamo/cuociamo",
+      "voi cocete/cuocete",
+      "loro cuociono"
+    ],
+    "past_perfect": [
+      "io ho cociuto/cotto",
+      "tu hai cociuto/cotto",
+      "lui ha cociuto/cotto",
+      "lei ha cociuto/cotto",
+      "noi abbiamo cociuto/cotto",
+      "voi avete cociuto/cotto",
+      "loro hanno cociuto/cotto"
+    ],
+    "imperfect": [
+      "io cocevo/cuocevo",
+      "tu cocevi/cuocevi",
+      "lui coceva/cuoceva",
+      "lei coceva/cuoceva",
+      "noi cocevamo/cuocevamo",
+      "voi cocevate/cuocevate",
+      "loro cocevano/cuocevano"
+    ],
+    "future": [
+      "io cocerò/cuocerò",
+      "tu cocerai/cuocerai",
+      "lui cocerà/cuocerà",
+      "lei cocerà/cuocerà",
+      "noi coceremo/cuoceremo",
+      "voi cocerete/cuocerete",
+      "loro coceranno/cuoceranno"
+    ]
+  },
+  "dare": {
+    "present": [
+      "io do",
+      "tu dai",
+      "lui dà",
+      "lei dà",
+      "noi diamo",
+      "voi date",
+      "loro danno"
+    ],
+    "past_perfect": [
+      "io ho dato",
+      "tu hai dato",
+      "lui ha dato",
+      "lei ha dato",
+      "noi abbiamo dato",
+      "voi avete dato",
+      "loro hanno dato"
+    ],
+    "imperfect": [
+      "io davo",
+      "tu davi",
+      "lui dava",
+      "lei dava",
+      "noi davamo",
+      "voi davate",
+      "loro davano"
+    ],
+    "future": [
+      "io darò",
+      "tu darai",
+      "lui darà",
+      "lei darà",
+      "noi daremo",
+      "voi darete",
+      "loro daranno"
+    ]
+  },
+  "decidere": {
+    "present": [
+      "io decido",
+      "tu decidi",
+      "lui decide",
+      "lei decide",
+      "noi decidiamo",
+      "voi decidete",
+      "loro decidono"
+    ],
+    "past_perfect": [
+      "io ho deciso",
+      "tu hai deciso",
+      "lui ha deciso",
+      "lei ha deciso",
+      "noi abbiamo deciso",
+      "voi avete deciso",
+      "loro hanno deciso"
+    ],
+    "imperfect": [
+      "io decidevo",
+      "tu decidevi",
+      "lui decideva",
+      "lei decideva",
+      "noi decidevamo",
+      "voi decidevate",
+      "loro decidevano"
+    ],
+    "future": [
+      "io deciderò",
+      "tu deciderai",
+      "lui deciderà",
+      "lei deciderà",
+      "noi decideremo",
+      "voi deciderete",
+      "loro decideranno"
+    ]
+  },
+  "dimenticare": {
+    "present": [
+      "io dimentico",
+      "tu dimentichi",
+      "lui dimentica",
+      "lei dimentica",
+      "noi dimentichiamo",
+      "voi dimenticate",
+      "loro dimenticano"
+    ],
+    "past_perfect": [
+      "io ho dimenticato",
+      "tu hai dimenticato",
+      "lui ha dimenticato",
+      "lei ha dimenticato",
+      "noi abbiamo dimenticato",
+      "voi avete dimenticato",
+      "loro hanno dimenticato"
+    ],
+    "imperfect": [
+      "io dimenticavo",
+      "tu dimenticavi",
+      "lui dimenticava",
+      "lei dimenticava",
+      "noi dimenticavamo",
+      "voi dimenticavate",
+      "loro dimenticavano"
+    ],
+    "future": [
+      "io dimenticherò",
+      "tu dimenticherai",
+      "lui dimenticherà",
+      "lei dimenticherà",
+      "noi dimenticheremo",
+      "voi dimenticherete",
+      "loro dimenticheranno"
+    ]
+  },
+  "dire": {
+    "present": [
+      "io dico",
+      "tu dici",
+      "lui dice",
+      "lei dice",
+      "noi diciamo",
+      "voi dite",
+      "loro dicono"
+    ],
+    "past_perfect": [
+      "io ho detto",
+      "tu hai detto",
+      "lui ha detto",
+      "lei ha detto",
+      "noi abbiamo detto",
+      "voi avete detto",
+      "loro hanno detto"
+    ],
+    "imperfect": [
+      "io dicevo",
+      "tu dicevi",
+      "lui diceva",
+      "lei diceva",
+      "noi dicevamo",
+      "voi dicevate",
+      "loro dicevano"
+    ],
+    "future": [
+      "io dirò",
+      "tu dirai",
+      "lui dirà",
+      "lei dirà",
+      "noi diremo",
+      "voi direte",
+      "loro diranno"
+    ]
+  },
+  "diventare": {
+    "present": [
+      "io divento",
+      "tu diventi",
+      "lui diventa",
+      "lei diventa",
+      "noi diventiamo",
+      "voi diventate",
+      "loro diventano"
+    ],
+    "past_perfect": [
+      "io sono diventata",
+      "io sono diventato",
+      "tu sei diventata",
+      "tu sei diventato",
+      "lui è diventato",
+      "lei è diventata",
+      "noi siamo diventate",
+      "noi siamo diventati",
+      "voi siete diventate",
+      "voi siete diventati",
+      "loro sono diventate",
+      "loro sono diventati"
+    ],
+    "imperfect": [
+      "io diventavo",
+      "tu diventavi",
+      "lui diventava",
+      "lei diventava",
+      "noi diventavamo",
+      "voi diventavate",
+      "loro diventavano"
+    ],
+    "future": [
+      "io diventerò",
+      "tu diventerai",
+      "lui diventerà",
+      "lei diventerà",
+      "noi diventeremo",
+      "voi diventerete",
+      "loro diventeranno"
+    ]
+  },
+  "dormire": {
+    "present": [
+      "io dormo",
+      "tu dormi",
+      "lui dorme",
+      "lei dorme",
+      "noi dormiamo",
+      "voi dormite",
+      "loro dormono"
+    ],
+    "past_perfect": [
+      "io ho dormito",
+      "tu hai dormito",
+      "lui ha dormito",
+      "lei ha dormito",
+      "noi abbiamo dormito",
+      "voi avete dormito",
+      "loro hanno dormito"
+    ],
+    "imperfect": [
+      "io dormivo",
+      "tu dormivi",
+      "lui dormiva",
+      "lei dormiva",
+      "noi dormivamo",
+      "voi dormivate",
+      "loro dormivano"
+    ],
+    "future": [
+      "io dormirò",
+      "tu dormirai",
+      "lui dormirà",
+      "lei dormirà",
+      "noi dormiremo",
+      "voi dormirete",
+      "loro dormiranno"
+    ]
+  },
+  "dovere": {
+    "present": [
+      "io devo/debbo",
+      "tu devi",
+      "lui deve",
+      "lei deve",
+      "noi dobbiamo",
+      "voi dovete",
+      "loro devono/debbono"
+    ],
+    "past_perfect": [
+      "io ho dovuto",
+      "tu hai dovuto",
+      "lui ha dovuto",
+      "lei ha dovuto",
+      "noi abbiamo dovuto",
+      "voi avete dovuto",
+      "loro hanno dovuto"
+    ],
+    "imperfect": [
+      "io dovevo",
+      "tu dovevi",
+      "lui doveva",
+      "lei doveva",
+      "noi dovevamo",
+      "voi dovevate",
+      "loro dovevano"
+    ],
+    "future": [
+      "io dovrò",
+      "tu dovrai",
+      "lui dovrà",
+      "lei dovrà",
+      "noi dovremo",
+      "voi dovrete",
+      "loro dovranno"
+    ]
+  },
+  "essere": {
+    "present": [
+      "io sono",
+      "tu sei",
+      "lui è",
+      "lei è",
+      "noi siamo",
+      "voi siete",
+      "loro sono"
+    ],
+    "past_perfect": [
+      "io sono stata",
+      "io sono stato",
+      "tu sei stata",
+      "tu sei stato",
+      "lui è stato",
+      "lei è stata",
+      "noi siamo state",
+      "noi siamo stati",
+      "voi siete state",
+      "voi siete stati",
+      "loro sono state",
+      "loro sono stati"
+    ],
+    "imperfect": [
+      "io ero",
+      "tu eri",
+      "lui era",
+      "lei era",
+      "noi eravamo",
+      "voi eravate",
+      "loro erano"
+    ],
+    "future": [
+      "io sarò",
+      "tu sarai",
+      "lui sarà",
+      "lei sarà",
+      "noi saremo",
+      "voi sarete",
+      "loro saranno"
+    ]
+  },
+  "fare": {
+    "present": [
+      "io faccio/fo",
+      "tu fai",
+      "lui fa",
+      "lei fa",
+      "noi facciamo",
+      "voi fate",
+      "loro fanno"
+    ],
+    "past_perfect": [
+      "io ho fatto",
+      "tu hai fatto",
+      "lui ha fatto",
+      "lei ha fatto",
+      "noi abbiamo fatto",
+      "voi avete fatto",
+      "loro hanno fatto"
+    ],
+    "imperfect": [
+      "io facevo",
+      "tu facevi",
+      "lui faceva",
+      "lei faceva",
+      "noi facevamo",
+      "voi facevate",
+      "loro facevano"
+    ],
+    "future": [
+      "io farò",
+      "tu farai",
+      "lui farà",
+      "lei farà",
+      "noi faremo",
+      "voi farete",
+      "loro faranno"
+    ]
+  },
+  "fare la doccia": {
+    "present": [
+      "io faccio/fo la doccia",
+      "tu fai la doccia",
+      "lui fa la doccia",
+      "lei fa la doccia",
+      "noi facciamo la doccia",
+      "voi fate la doccia",
+      "loro fanno la doccia"
+    ],
+    "past_perfect": [
+      "io ho fatto la doccia",
+      "tu hai fatto la doccia",
+      "lui ha fatto la doccia",
+      "lei ha fatto la doccia",
+      "noi abbiamo fatto la doccia",
+      "voi avete fatto la doccia",
+      "loro hanno fatto la doccia"
+    ],
+    "imperfect": [
+      "io facevo la doccia",
+      "tu facevi la doccia",
+      "lui faceva la doccia",
+      "lei faceva la doccia",
+      "noi facevamo la doccia",
+      "voi facevate la doccia",
+      "loro facevano la doccia"
+    ],
+    "future": [
+      "io farò la doccia",
+      "tu farai la doccia",
+      "lui farà la doccia",
+      "lei farà la doccia",
+      "noi faremo la doccia",
+      "voi farete la doccia",
+      "loro faranno la doccia"
+    ]
+  },
+  "finire": {
+    "present": [
+      "io finisco",
+      "tu finisci",
+      "lui finisce",
+      "lei finisce",
+      "noi finiamo",
+      "voi finite",
+      "loro finiscono"
+    ],
+    "past_perfect": [
+      "io ho finito",
+      "tu hai finito",
+      "lui ha finito",
+      "lei ha finito",
+      "noi abbiamo finito",
+      "voi avete finito",
+      "loro hanno finito"
+    ],
+    "imperfect": [
+      "io finivo",
+      "tu finivi",
+      "lui finiva",
+      "lei finiva",
+      "noi finivamo",
+      "voi finivate",
+      "loro finivano"
+    ],
+    "future": [
+      "io finirò",
+      "tu finirai",
+      "lui finirà",
+      "lei finirà",
+      "noi finiremo",
+      "voi finirete",
+      "loro finiranno"
+    ]
+  },
+  "giacere": {
+    "present": [
+      "io giaccio",
+      "tu giaci",
+      "lui giace",
+      "lei giace",
+      "noi giacciamo",
+      "voi giacete",
+      "loro giacciono"
+    ],
+    "past_perfect": [
+      "io ho giaciuto",
+      "tu hai giaciuto",
+      "lui ha giaciuto",
+      "lei ha giaciuto",
+      "noi abbiamo giaciuto",
+      "voi avete giaciuto",
+      "loro hanno giaciuto"
+    ],
+    "imperfect": [
+      "io giacevo",
+      "tu giacevi",
+      "lui giaceva",
+      "lei giaceva",
+      "noi giacevamo",
+      "voi giacevate",
+      "loro giacevano"
+    ],
+    "future": [
+      "io giacerò",
+      "tu giacerai",
+      "lui giacerà",
+      "lei giacerà",
+      "noi giaceremo",
+      "voi giacerete",
+      "loro giaceranno"
+    ]
+  },
+  "guardare": {
+    "present": [
+      "io guardo",
+      "tu guardi",
+      "lui guarda",
+      "lei guarda",
+      "noi guardiamo",
+      "voi guardate",
+      "loro guardano"
+    ],
+    "past_perfect": [
+      "io ho guardato",
+      "tu hai guardato",
+      "lui ha guardato",
+      "lei ha guardato",
+      "noi abbiamo guardato",
+      "voi avete guardato",
+      "loro hanno guardato"
+    ],
+    "imperfect": [
+      "io guardavo",
+      "tu guardavi",
+      "lui guardava",
+      "lei guardava",
+      "noi guardavamo",
+      "voi guardavate",
+      "loro guardavano"
+    ],
+    "future": [
+      "io guarderò",
+      "tu guarderai",
+      "lui guarderà",
+      "lei guarderà",
+      "noi guarderemo",
+      "voi guarderete",
+      "loro guarderanno"
+    ]
+  },
+  "guidare": {
+    "present": [
+      "io guido",
+      "tu guidi",
+      "lui guida",
+      "lei guida",
+      "noi guidiamo",
+      "voi guidate",
+      "loro guidano"
+    ],
+    "past_perfect": [
+      "io ho guidato",
+      "tu hai guidato",
+      "lui ha guidato",
+      "lei ha guidato",
+      "noi abbiamo guidato",
+      "voi avete guidato",
+      "loro hanno guidato"
+    ],
+    "imperfect": [
+      "io guidavo",
+      "tu guidavi",
+      "lui guidava",
+      "lei guidava",
+      "noi guidavamo",
+      "voi guidavate",
+      "loro guidavano"
+    ],
+    "future": [
+      "io guiderò",
+      "tu guiderai",
+      "lui guiderà",
+      "lei guiderà",
+      "noi guideremo",
+      "voi guiderete",
+      "loro guideranno"
+    ]
+  },
+  "imparare": {
+    "present": [
+      "io imparo",
+      "tu impari",
+      "lui impara",
+      "lei impara",
+      "noi impariamo",
+      "voi imparate",
+      "loro imparano"
+    ],
+    "past_perfect": [
+      "io ho imparato",
+      "tu hai imparato",
+      "lui ha imparato",
+      "lei ha imparato",
+      "noi abbiamo imparato",
+      "voi avete imparato",
+      "loro hanno imparato"
+    ],
+    "imperfect": [
+      "io imparavo",
+      "tu imparavi",
+      "lui imparava",
+      "lei imparava",
+      "noi imparavamo",
+      "voi imparavate",
+      "loro imparavano"
+    ],
+    "future": [
+      "io imparerò",
+      "tu imparerai",
+      "lui imparerà",
+      "lei imparerà",
+      "noi impareremo",
+      "voi imparerete",
+      "loro impareranno"
+    ]
+  },
+  "incontrare": {
+    "present": [
+      "io incontro",
+      "tu incontri",
+      "lui incontra",
+      "lei incontra",
+      "noi incontriamo",
+      "voi incontrate",
+      "loro incontrano"
+    ],
+    "past_perfect": [
+      "io ho incontrato",
+      "tu hai incontrato",
+      "lui ha incontrato",
+      "lei ha incontrato",
+      "noi abbiamo incontrato",
+      "voi avete incontrato",
+      "loro hanno incontrato"
+    ],
+    "imperfect": [
+      "io incontravo",
+      "tu incontravi",
+      "lui incontrava",
+      "lei incontrava",
+      "noi incontravamo",
+      "voi incontravate",
+      "loro incontravano"
+    ],
+    "future": [
+      "io incontrerò",
+      "tu incontrerai",
+      "lui incontrerà",
+      "lei incontrerà",
+      "noi incontreremo",
+      "voi incontrerete",
+      "loro incontreranno"
+    ]
+  },
+  "iniziare": {
+    "present": [
+      "io inizio",
+      "tu inizi",
+      "lui inizia",
+      "lei inizia",
+      "noi iniziamo",
+      "voi iniziate",
+      "loro iniziano"
+    ],
+    "past_perfect": [
+      "io ho iniziato",
+      "tu hai iniziato",
+      "lui ha iniziato",
+      "lei ha iniziato",
+      "noi abbiamo iniziato",
+      "voi avete iniziato",
+      "loro hanno iniziato"
+    ],
+    "imperfect": [
+      "io iniziavo",
+      "tu iniziavi",
+      "lui iniziava",
+      "lei iniziava",
+      "noi iniziavamo",
+      "voi iniziavate",
+      "loro iniziavano"
+    ],
+    "future": [
+      "io inizierò",
+      "tu inizierai",
+      "lui inizierà",
+      "lei inizierà",
+      "noi inizieremo",
+      "voi inizierete",
+      "loro inizieranno"
+    ]
+  },
+  "insegnare": {
+    "present": [
+      "io insegno",
+      "tu insegni",
+      "lui insegna",
+      "lei insegna",
+      "noi insegniamo/insegnamo",
+      "voi insegnate/insegniate",
+      "loro insegnano"
+    ],
+    "past_perfect": [
+      "io ho insegnato",
+      "tu hai insegnato",
+      "lui ha insegnato",
+      "lei ha insegnato",
+      "noi abbiamo insegnato",
+      "voi avete insegnato",
+      "loro hanno insegnato"
+    ],
+    "imperfect": [
+      "io insegnavo",
+      "tu insegnavi",
+      "lui insegnava",
+      "lei insegnava",
+      "noi insegnavamo",
+      "voi insegnavate",
+      "loro insegnavano"
+    ],
+    "future": [
+      "io insegnerò",
+      "tu insegnerai",
+      "lui insegnerà",
+      "lei insegnerà",
+      "noi insegneremo",
+      "voi insegnerete",
+      "loro insegneranno"
+    ]
+  },
+  "lasciare": {
+    "present": [
+      "io lascio",
+      "tu lasci",
+      "lui lascia",
+      "lei lascia",
+      "noi lasciamo",
+      "voi lasciate",
+      "loro lasciano"
+    ],
+    "past_perfect": [
+      "io ho lasciato",
+      "tu hai lasciato",
+      "lui ha lasciato",
+      "lei ha lasciato",
+      "noi abbiamo lasciato",
+      "voi avete lasciato",
+      "loro hanno lasciato"
+    ],
+    "imperfect": [
+      "io lasciavo",
+      "tu lasciavi",
+      "lui lasciava",
+      "lei lasciava",
+      "noi lasciavamo",
+      "voi lasciavate",
+      "loro lasciavano"
+    ],
+    "future": [
+      "io lascerò",
+      "tu lascerai",
+      "lui lascerà",
+      "lei lascerà",
+      "noi lasceremo",
+      "voi lascerete",
+      "loro lasceranno"
+    ]
+  },
+  "lavare": {
+    "present": [
+      "io lavo",
+      "tu lavi",
+      "lui lava",
+      "lei lava",
+      "noi laviamo",
+      "voi lavate",
+      "loro lavano"
+    ],
+    "past_perfect": [
+      "io ho lavato",
+      "tu hai lavato",
+      "lui ha lavato",
+      "lei ha lavato",
+      "noi abbiamo lavato",
+      "voi avete lavato",
+      "loro hanno lavato"
+    ],
+    "imperfect": [
+      "io lavavo",
+      "tu lavavi",
+      "lui lavava",
+      "lei lavava",
+      "noi lavavamo",
+      "voi lavavate",
+      "loro lavavano"
+    ],
+    "future": [
+      "io laverò",
+      "tu laverai",
+      "lui laverà",
+      "lei laverà",
+      "noi laveremo",
+      "voi laverete",
+      "loro laveranno"
+    ]
+  },
+  "lavarsi": {
+    "present": [
+      "io mi lavo",
+      "tu ti lavi",
+      "lui si lava",
+      "lei si lava",
+      "noi ci laviamo",
+      "voi vi lavate",
+      "loro si lavano"
+    ],
+    "past_perfect": [
+      "io mi sono lavata",
+      "io mi sono lavato",
+      "tu ti sei lavata",
+      "tu ti sei lavato",
+      "lui si è lavato",
+      "lei si è lavata",
+      "noi ci siamo lavate",
+      "noi ci siamo lavati",
+      "voi vi siete lavate",
+      "voi vi siete lavati",
+      "loro si sono lavate",
+      "loro si sono lavati"
+    ],
+    "imperfect": [
+      "io mi lavavo",
+      "tu ti lavavi",
+      "lui si lavava",
+      "lei si lavava",
+      "noi ci lavavamo",
+      "voi vi lavavate",
+      "loro si lavavano"
+    ],
+    "future": [
+      "io mi laverò",
+      "tu ti laverai",
+      "lui si laverà",
+      "lei si laverà",
+      "noi ci laveremo",
+      "voi vi laverete",
+      "loro si laveranno"
+    ]
+  },
+  "lavorare": {
+    "present": [
+      "io lavoro",
+      "tu lavori",
+      "lui lavora",
+      "lei lavora",
+      "noi lavoriamo",
+      "voi lavorate",
+      "loro lavorano"
+    ],
+    "past_perfect": [
+      "io ho lavorato",
+      "tu hai lavorato",
+      "lui ha lavorato",
+      "lei ha lavorato",
+      "noi abbiamo lavorato",
+      "voi avete lavorato",
+      "loro hanno lavorato"
+    ],
+    "imperfect": [
+      "io lavoravo",
+      "tu lavoravi",
+      "lui lavorava",
+      "lei lavorava",
+      "noi lavoravamo",
+      "voi lavoravate",
+      "loro lavoravano"
+    ],
+    "future": [
+      "io lavorerò",
+      "tu lavorerai",
+      "lui lavorerà",
+      "lei lavorerà",
+      "noi lavoreremo",
+      "voi lavorerete",
+      "loro lavoreranno"
+    ]
+  },
+  "leggere": {
+    "present": [
+      "io leggo",
+      "tu leggi",
+      "lui legge",
+      "lei legge",
+      "noi leggiamo",
+      "voi leggete",
+      "loro leggono"
+    ],
+    "past_perfect": [
+      "io ho letto",
+      "tu hai letto",
+      "lui ha letto",
+      "lei ha letto",
+      "noi abbiamo letto",
+      "voi avete letto",
+      "loro hanno letto"
+    ],
+    "imperfect": [
+      "io leggevo",
+      "tu leggevi",
+      "lui leggeva",
+      "lei leggeva",
+      "noi leggevamo",
+      "voi leggevate",
+      "loro leggevano"
+    ],
+    "future": [
+      "io leggerò",
+      "tu leggerai",
+      "lui leggerà",
+      "lei leggerà",
+      "noi leggeremo",
+      "voi leggerete",
+      "loro leggeranno"
+    ]
+  },
+  "mangiare": {
+    "present": [
+      "io mangio",
+      "tu mangi",
+      "lui mangia",
+      "lei mangia",
+      "noi mangiamo",
+      "voi mangiate",
+      "loro mangiano"
+    ],
+    "past_perfect": [
+      "io ho mangiato",
+      "tu hai mangiato",
+      "lui ha mangiato",
+      "lei ha mangiato",
+      "noi abbiamo mangiato",
+      "voi avete mangiato",
+      "loro hanno mangiato"
+    ],
+    "imperfect": [
+      "io mangiavo",
+      "tu mangiavi",
+      "lui mangiava",
+      "lei mangiava",
+      "noi mangiavamo",
+      "voi mangiavate",
+      "loro mangiavano"
+    ],
+    "future": [
+      "io mangerò",
+      "tu mangerai",
+      "lui mangerà",
+      "lei mangerà",
+      "noi mangeremo",
+      "voi mangerete",
+      "loro mangeranno"
+    ]
+  },
+  "mettere": {
+    "present": [
+      "io metto",
+      "tu metti",
+      "lui mette",
+      "lei mette",
+      "noi mettiamo",
+      "voi mettete",
+      "loro mettono"
+    ],
+    "past_perfect": [
+      "io ho messo",
+      "tu hai messo",
+      "lui ha messo",
+      "lei ha messo",
+      "noi abbiamo messo",
+      "voi avete messo",
+      "loro hanno messo"
+    ],
+    "imperfect": [
+      "io mettevo",
+      "tu mettevi",
+      "lui metteva",
+      "lei metteva",
+      "noi mettevamo",
+      "voi mettevate",
+      "loro mettevano"
+    ],
+    "future": [
+      "io metterò",
+      "tu metterai",
+      "lui metterà",
+      "lei metterà",
+      "noi metteremo",
+      "voi metterete",
+      "loro metteranno"
+    ]
+  },
+  "morire": {
+    "present": [
+      "io muoio",
+      "tu muori",
+      "lui muore",
+      "lei muore",
+      "noi moriamo",
+      "voi morite",
+      "loro muoiono"
+    ],
+    "past_perfect": [
+      "io sono morta",
+      "io sono morto",
+      "tu sei morta",
+      "tu sei morto",
+      "lui è morto",
+      "lei è morta",
+      "noi siamo morte",
+      "noi siamo morti",
+      "voi siete morte",
+      "voi siete morti",
+      "loro sono morte",
+      "loro sono morti"
+    ],
+    "imperfect": [
+      "io morivo",
+      "tu morivi",
+      "lui moriva",
+      "lei moriva",
+      "noi morivamo",
+      "voi morivate",
+      "loro morivano"
+    ],
+    "future": [
+      "io morirò/morrò",
+      "tu morirai/morrai",
+      "lui morirà/morrà",
+      "lei morirà/morrà",
+      "noi moriremo/morremo",
+      "voi morirete/morrete",
+      "loro moriranno/morranno"
+    ]
+  },
+  "nascere": {
+    "present": [
+      "io nasco",
+      "tu nasci",
+      "lui nasce",
+      "lei nasce",
+      "noi nasciamo",
+      "voi nascete",
+      "loro nascono"
+    ],
+    "past_perfect": [
+      "io sono nata",
+      "io sono nato",
+      "tu sei nata",
+      "tu sei nato",
+      "lui è nato",
+      "lei è nata",
+      "noi siamo nate",
+      "noi siamo nati",
+      "voi siete nate",
+      "voi siete nati",
+      "loro sono nate",
+      "loro sono nati"
+    ],
+    "imperfect": [
+      "io nascevo",
+      "tu nascevi",
+      "lui nasceva",
+      "lei nasceva",
+      "noi nascevamo",
+      "voi nascevate",
+      "loro nascevano"
+    ],
+    "future": [
+      "io nascerò",
+      "tu nascerai",
+      "lui nascerà",
+      "lei nascerà",
+      "noi nasceremo",
+      "voi nascerete",
+      "loro nasceranno"
+    ]
+  },
+  "ordinare": {
+    "present": [
+      "io ordino",
+      "tu ordini",
+      "lui ordina",
+      "lei ordina",
+      "noi ordiniamo",
+      "voi ordinate",
+      "loro ordinano"
+    ],
+    "past_perfect": [
+      "io ho ordinato",
+      "tu hai ordinato",
+      "lui ha ordinato",
+      "lei ha ordinato",
+      "noi abbiamo ordinato",
+      "voi avete ordinato",
+      "loro hanno ordinato"
+    ],
+    "imperfect": [
+      "io ordinavo",
+      "tu ordinavi",
+      "lui ordinava",
+      "lei ordinava",
+      "noi ordinavamo",
+      "voi ordinavate",
+      "loro ordinavano"
+    ],
+    "future": [
+      "io ordinerò",
+      "tu ordinerai",
+      "lui ordinerà",
+      "lei ordinerà",
+      "noi ordineremo",
+      "voi ordinerete",
+      "loro ordineranno"
+    ]
+  },
+  "pagare": {
+    "present": [
+      "io pago",
+      "tu paghi",
+      "lui paga",
+      "lei paga",
+      "noi paghiamo",
+      "voi pagate",
+      "loro pagano"
+    ],
+    "past_perfect": [
+      "io ho pagato",
+      "tu hai pagato",
+      "lui ha pagato",
+      "lei ha pagato",
+      "noi abbiamo pagato",
+      "voi avete pagato",
+      "loro hanno pagato"
+    ],
+    "imperfect": [
+      "io pagavo",
+      "tu pagavi",
+      "lui pagava",
+      "lei pagava",
+      "noi pagavamo",
+      "voi pagavate",
+      "loro pagavano"
+    ],
+    "future": [
+      "io pagherò",
+      "tu pagherai",
+      "lui pagherà",
+      "lei pagherà",
+      "noi pagheremo",
+      "voi pagherete",
+      "loro pagheranno"
+    ]
+  },
+  "parlare": {
+    "present": [
+      "io parlo",
+      "tu parli",
+      "lui parla",
+      "lei parla",
+      "noi parliamo",
+      "voi parlate",
+      "loro parlano"
+    ],
+    "past_perfect": [
+      "io ho parlato",
+      "tu hai parlato",
+      "lui ha parlato",
+      "lei ha parlato",
+      "noi abbiamo parlato",
+      "voi avete parlato",
+      "loro hanno parlato"
+    ],
+    "imperfect": [
+      "io parlavo",
+      "tu parlavi",
+      "lui parlava",
+      "lei parlava",
+      "noi parlavamo",
+      "voi parlavate",
+      "loro parlavano"
+    ],
+    "future": [
+      "io parlerò",
+      "tu parlerai",
+      "lui parlerà",
+      "lei parlerà",
+      "noi parleremo",
+      "voi parlerete",
+      "loro parleranno"
+    ]
+  },
+  "partire": {
+    "present": [
+      "io parto",
+      "tu parti",
+      "lui parte",
+      "lei parte",
+      "noi partiamo",
+      "voi partite",
+      "loro partono"
+    ],
+    "past_perfect": [
+      "io sono partita",
+      "io sono partito",
+      "tu sei partita",
+      "tu sei partito",
+      "lui è partito",
+      "lei è partita",
+      "noi siamo partite",
+      "noi siamo partiti",
+      "voi siete partite",
+      "voi siete partiti",
+      "loro sono partite",
+      "loro sono partiti"
+    ],
+    "imperfect": [
+      "io partivo",
+      "tu partivi",
+      "lui partiva",
+      "lei partiva",
+      "noi partivamo",
+      "voi partivate",
+      "loro partivano"
+    ],
+    "future": [
+      "io partirò",
+      "tu partirai",
+      "lui partirà",
+      "lei partirà",
+      "noi partiremo",
+      "voi partirete",
+      "loro partiranno"
+    ]
+  },
+  "pensare": {
+    "present": [
+      "io penso",
+      "tu pensi",
+      "lui pensa",
+      "lei pensa",
+      "noi pensiamo",
+      "voi pensate",
+      "loro pensano"
+    ],
+    "past_perfect": [
+      "io ho pensato",
+      "tu hai pensato",
+      "lui ha pensato",
+      "lei ha pensato",
+      "noi abbiamo pensato",
+      "voi avete pensato",
+      "loro hanno pensato"
+    ],
+    "imperfect": [
+      "io pensavo",
+      "tu pensavi",
+      "lui pensava",
+      "lei pensava",
+      "noi pensavamo",
+      "voi pensavate",
+      "loro pensavano"
+    ],
+    "future": [
+      "io penserò",
+      "tu penserai",
+      "lui penserà",
+      "lei penserà",
+      "noi penseremo",
+      "voi penserete",
+      "loro penseranno"
+    ]
+  },
+  "piacere": {
+    "present": [
+      "io piaccio",
+      "tu piaci",
+      "lui piace",
+      "lei piace",
+      "noi piacciamo/piaciamo",
+      "voi piacete",
+      "loro piacciono"
+    ],
+    "past_perfect": [
+      "io ho piaciuto",
+      "tu hai piaciuto",
+      "lui ha piaciuto",
+      "lei ha piaciuto",
+      "noi abbiamo piaciuto",
+      "voi avete piaciuto",
+      "loro hanno piaciuto"
+    ],
+    "imperfect": [
+      "io piacevo",
+      "tu piacevi",
+      "lui piaceva",
+      "lei piaceva",
+      "noi piacevamo",
+      "voi piacevate",
+      "loro piacevano"
+    ],
+    "future": [
+      "io piacerò",
+      "tu piacerai",
+      "lui piacerà",
+      "lei piacerà",
+      "noi piaceremo",
+      "voi piacerete",
+      "loro piaceranno"
+    ]
+  },
+  "portare": {
+    "present": [
+      "io porto",
+      "tu porti",
+      "lui porta",
+      "lei porta",
+      "noi portiamo",
+      "voi portate",
+      "loro portano"
+    ],
+    "past_perfect": [
+      "io ho portato",
+      "tu hai portato",
+      "lui ha portato",
+      "lei ha portato",
+      "noi abbiamo portato",
+      "voi avete portato",
+      "loro hanno portato"
+    ],
+    "imperfect": [
+      "io portavo",
+      "tu portavi",
+      "lui portava",
+      "lei portava",
+      "noi portavamo",
+      "voi portavate",
+      "loro portavano"
+    ],
+    "future": [
+      "io porterò",
+      "tu porterai",
+      "lui porterà",
+      "lei porterà",
+      "noi porteremo",
+      "voi porterete",
+      "loro porteranno"
+    ]
+  },
+  "potere": {
+    "present": [
+      "io posso",
+      "tu puoi",
+      "lui può",
+      "lei può",
+      "noi possiamo",
+      "voi potete",
+      "loro possono"
+    ],
+    "past_perfect": [
+      "io ho potuto",
+      "tu hai potuto",
+      "lui ha potuto",
+      "lei ha potuto",
+      "noi abbiamo potuto",
+      "voi avete potuto",
+      "loro hanno potuto"
+    ],
+    "imperfect": [
+      "io potevo",
+      "tu potevi",
+      "lui poteva",
+      "lei poteva",
+      "noi potevamo",
+      "voi potevate",
+      "loro potevano"
+    ],
+    "future": [
+      "io potrò",
+      "tu potrai",
+      "lui potrà",
+      "lei potrà",
+      "noi potremo",
+      "voi potrete",
+      "loro potranno"
+    ]
+  },
+  "prendere": {
+    "present": [
+      "io prendo",
+      "tu prendi",
+      "lui prende",
+      "lei prende",
+      "noi prendiamo",
+      "voi prendete",
+      "loro prendono"
+    ],
+    "past_perfect": [
+      "io ho preso",
+      "tu hai preso",
+      "lui ha preso",
+      "lei ha preso",
+      "noi abbiamo preso",
+      "voi avete preso",
+      "loro hanno preso"
+    ],
+    "imperfect": [
+      "io prendevo",
+      "tu prendevi",
+      "lui prendeva",
+      "lei prendeva",
+      "noi prendevamo",
+      "voi prendevate",
+      "loro prendevano"
+    ],
+    "future": [
+      "io prenderò",
+      "tu prenderai",
+      "lui prenderà",
+      "lei prenderà",
+      "noi prenderemo",
+      "voi prenderete",
+      "loro prenderanno"
+    ]
+  },
+  "prenotare": {
+    "present": [
+      "io prenoto",
+      "tu prenoti",
+      "lui prenota",
+      "lei prenota",
+      "noi prenotiamo",
+      "voi prenotate",
+      "loro prenotano"
+    ],
+    "past_perfect": [
+      "io ho prenotato",
+      "tu hai prenotato",
+      "lui ha prenotato",
+      "lei ha prenotato",
+      "noi abbiamo prenotato",
+      "voi avete prenotato",
+      "loro hanno prenotato"
+    ],
+    "imperfect": [
+      "io prenotavo",
+      "tu prenotavi",
+      "lui prenotava",
+      "lei prenotava",
+      "noi prenotavamo",
+      "voi prenotavate",
+      "loro prenotavano"
+    ],
+    "future": [
+      "io prenoterò",
+      "tu prenoterai",
+      "lui prenoterà",
+      "lei prenoterà",
+      "noi prenoteremo",
+      "voi prenoterete",
+      "loro prenoteranno"
+    ]
+  },
+  "provare": {
+    "present": [
+      "io provo",
+      "tu provi",
+      "lui prova",
+      "lei prova",
+      "noi proviamo",
+      "voi provate",
+      "loro provano"
+    ],
+    "past_perfect": [
+      "io ho provato",
+      "tu hai provato",
+      "lui ha provato",
+      "lei ha provato",
+      "noi abbiamo provato",
+      "voi avete provato",
+      "loro hanno provato"
+    ],
+    "imperfect": [
+      "io provavo",
+      "tu provavi",
+      "lui provava",
+      "lei provava",
+      "noi provavamo",
+      "voi provavate",
+      "loro provavano"
+    ],
+    "future": [
+      "io proverò",
+      "tu proverai",
+      "lui proverà",
+      "lei proverà",
+      "noi proveremo",
+      "voi proverete",
+      "loro proveranno"
+    ]
+  },
+  "raccontare": {
+    "present": [
+      "io racconto",
+      "tu racconti",
+      "lui racconta",
+      "lei racconta",
+      "noi raccontiamo",
+      "voi raccontate",
+      "loro raccontano"
+    ],
+    "past_perfect": [
+      "io ho raccontato",
+      "tu hai raccontato",
+      "lui ha raccontato",
+      "lei ha raccontato",
+      "noi abbiamo raccontato",
+      "voi avete raccontato",
+      "loro hanno raccontato"
+    ],
+    "imperfect": [
+      "io raccontavo",
+      "tu raccontavi",
+      "lui raccontava",
+      "lei raccontava",
+      "noi raccontavamo",
+      "voi raccontavate",
+      "loro raccontavano"
+    ],
+    "future": [
+      "io racconterò",
+      "tu racconterai",
+      "lui racconterà",
+      "lei racconterà",
+      "noi racconteremo",
+      "voi racconterete",
+      "loro racconteranno"
+    ]
+  },
+  "ricordare": {
+    "present": [
+      "io ricordo",
+      "tu ricordi",
+      "lui ricorda",
+      "lei ricorda",
+      "noi ricordiamo",
+      "voi ricordate",
+      "loro ricordano"
+    ],
+    "past_perfect": [
+      "io ho ricordato",
+      "tu hai ricordato",
+      "lui ha ricordato",
+      "lei ha ricordato",
+      "noi abbiamo ricordato",
+      "voi avete ricordato",
+      "loro hanno ricordato"
+    ],
+    "imperfect": [
+      "io ricordavo",
+      "tu ricordavi",
+      "lui ricordava",
+      "lei ricordava",
+      "noi ricordavamo",
+      "voi ricordavate",
+      "loro ricordavano"
+    ],
+    "future": [
+      "io ricorderò",
+      "tu ricorderai",
+      "lui ricorderà",
+      "lei ricorderà",
+      "noi ricorderemo",
+      "voi ricorderete",
+      "loro ricorderanno"
+    ]
+  },
+  "ricordarsi": {
+    "present": [
+      "io mi ricordo",
+      "tu ti ricordi",
+      "lui si ricorda",
+      "lei si ricorda",
+      "noi ci ricordiamo",
+      "voi vi ricordate",
+      "loro si ricordano"
+    ],
+    "past_perfect": [
+      "io mi sono ricordata",
+      "io mi sono ricordato",
+      "tu ti sei ricordata",
+      "tu ti sei ricordato",
+      "lui si è ricordato",
+      "lei si è ricordata",
+      "noi ci siamo ricordate",
+      "noi ci siamo ricordati",
+      "voi vi siete ricordate",
+      "voi vi siete ricordati",
+      "loro si sono ricordate",
+      "loro si sono ricordati"
+    ],
+    "imperfect": [
+      "io mi ricordavo",
+      "tu ti ricordavi",
+      "lui si ricordava",
+      "lei si ricordava",
+      "noi ci ricordavamo",
+      "voi vi ricordavate",
+      "loro si ricordavano"
+    ],
+    "future": [
+      "io mi ricorderò",
+      "tu ti ricorderai",
+      "lui si ricorderà",
+      "lei si ricorderà",
+      "noi ci ricorderemo",
+      "voi vi ricorderete",
+      "loro si ricorderanno"
+    ]
+  },
+  "rimanere": {
+    "present": [
+      "io rimango",
+      "tu rimani",
+      "lui rimane",
+      "lei rimane",
+      "noi rimaniamo",
+      "voi rimanete",
+      "loro rimangono"
+    ],
+    "past_perfect": [
+      "io sono rimasta/rimasa",
+      "io sono rimasto/rimaso",
+      "tu sei rimasta/rimasa",
+      "tu sei rimasto/rimaso",
+      "lui è rimasto/rimaso",
+      "lei è rimasta/rimasa",
+      "noi siamo rimaste/rimase",
+      "noi siamo rimasti/rimasi",
+      "voi siete rimaste/rimase",
+      "voi siete rimasti/rimasi",
+      "loro sono rimaste/rimase",
+      "loro sono rimasti/rimasi"
+    ],
+    "imperfect": [
+      "io rimanevo",
+      "tu rimanevi",
+      "lui rimaneva",
+      "lei rimaneva",
+      "noi rimanevamo",
+      "voi rimanevate",
+      "loro rimanevano"
+    ],
+    "future": [
+      "io rimarrò",
+      "tu rimarrai",
+      "lui rimarrà",
+      "lei rimarrà",
+      "noi rimarremo",
+      "voi rimarrete",
+      "loro rimarranno"
+    ]
+  },
+  "riparare": {
+    "present": [
+      "io riparo",
+      "tu ripari",
+      "lui ripara",
+      "lei ripara",
+      "noi ripariamo",
+      "voi riparate",
+      "loro riparano"
+    ],
+    "past_perfect": [
+      "io ho riparato",
+      "tu hai riparato",
+      "lui ha riparato",
+      "lei ha riparato",
+      "noi abbiamo riparato",
+      "voi avete riparato",
+      "loro hanno riparato"
+    ],
+    "imperfect": [
+      "io riparavo",
+      "tu riparavi",
+      "lui riparava",
+      "lei riparava",
+      "noi riparavamo",
+      "voi riparavate",
+      "loro riparavano"
+    ],
+    "future": [
+      "io riparerò",
+      "tu riparerai",
+      "lui riparerà",
+      "lei riparerà",
+      "noi ripareremo",
+      "voi riparerete",
+      "loro ripareranno"
+    ]
+  },
+  "rispondere": {
+    "present": [
+      "io rispondo",
+      "tu rispondi",
+      "lui risponde",
+      "lei risponde",
+      "noi rispondiamo",
+      "voi rispondete",
+      "loro rispondono"
+    ],
+    "past_perfect": [
+      "io ho risposto/risposo",
+      "tu hai risposto/risposo",
+      "lui ha risposto/risposo",
+      "lei ha risposto/risposo",
+      "noi abbiamo risposto/risposo",
+      "voi avete risposto/risposo",
+      "loro hanno risposto/risposo"
+    ],
+    "imperfect": [
+      "io rispondevo",
+      "tu rispondevi",
+      "lui rispondeva",
+      "lei rispondeva",
+      "noi rispondevamo",
+      "voi rispondevate",
+      "loro rispondevano"
+    ],
+    "future": [
+      "io risponderò",
+      "tu risponderai",
+      "lui risponderà",
+      "lei risponderà",
+      "noi risponderemo",
+      "voi risponderete",
+      "loro risponderanno"
+    ]
+  },
+  "rompere": {
+    "present": [
+      "io rompo",
+      "tu rompi",
+      "lui rompe",
+      "lei rompe",
+      "noi rompiamo",
+      "voi rompete",
+      "loro rompono"
+    ],
+    "past_perfect": [
+      "io ho rotto",
+      "tu hai rotto",
+      "lui ha rotto",
+      "lei ha rotto",
+      "noi abbiamo rotto",
+      "voi avete rotto",
+      "loro hanno rotto"
+    ],
+    "imperfect": [
+      "io rompevo",
+      "tu rompevi",
+      "lui rompeva",
+      "lei rompeva",
+      "noi rompevamo",
+      "voi rompevate",
+      "loro rompevano"
+    ],
+    "future": [
+      "io romperò",
+      "tu romperai",
+      "lui romperà",
+      "lei romperà",
+      "noi romperemo",
+      "voi romperete",
+      "loro romperanno"
+    ]
+  },
+  "sapere": {
+    "present": [
+      "io so",
+      "tu sai",
+      "lui sa",
+      "lei sa",
+      "noi sappiamo",
+      "voi sapete",
+      "loro sanno"
+    ],
+    "past_perfect": [
+      "io ho saputo",
+      "tu hai saputo",
+      "lui ha saputo",
+      "lei ha saputo",
+      "noi abbiamo saputo",
+      "voi avete saputo",
+      "loro hanno saputo"
+    ],
+    "imperfect": [
+      "io sapevo",
+      "tu sapevi",
+      "lui sapeva",
+      "lei sapeva",
+      "noi sapevamo",
+      "voi sapevate",
+      "loro sapevano"
+    ],
+    "future": [
+      "io saprò",
+      "tu saprai",
+      "lui saprà",
+      "lei saprà",
+      "noi sapremo",
+      "voi saprete",
+      "loro sapranno"
+    ]
+  },
+  "sbagliarsi": {
+    "present": [
+      "io mi sbaglio",
+      "tu ti sbagli",
+      "lui si sbaglia",
+      "lei si sbaglia",
+      "noi ci sbagliamo",
+      "voi vi sbagliate",
+      "loro si sbagliano"
+    ],
+    "past_perfect": [
+      "io mi sono sbagliata",
+      "io mi sono sbagliato",
+      "tu ti sei sbagliata",
+      "tu ti sei sbagliato",
+      "lui si è sbagliato",
+      "lei si è sbagliata",
+      "noi ci siamo sbagliate",
+      "noi ci siamo sbagliati",
+      "voi vi siete sbagliate",
+      "voi vi siete sbagliati",
+      "loro si sono sbagliate",
+      "loro si sono sbagliati"
+    ],
+    "imperfect": [
+      "io mi sbagliavo",
+      "tu ti sbagliavi",
+      "lui si sbagliava",
+      "lei si sbagliava",
+      "noi ci sbagliavamo",
+      "voi vi sbagliavate",
+      "loro si sbagliavano"
+    ],
+    "future": [
+      "io mi sbaglierò",
+      "tu ti sbaglierai",
+      "lui si sbaglierà",
+      "lei si sbaglierà",
+      "noi ci sbaglieremo",
+      "voi vi sbaglierete",
+      "loro si sbaglieranno"
+    ]
+  },
+  "scegliere": {
+    "present": [
+      "io scelgo",
+      "tu scegli",
+      "lui sceglie",
+      "lei sceglie",
+      "noi scegliamo",
+      "voi scegliete",
+      "loro scelgono"
+    ],
+    "past_perfect": [
+      "io ho scelto",
+      "tu hai scelto",
+      "lui ha scelto",
+      "lei ha scelto",
+      "noi abbiamo scelto",
+      "voi avete scelto",
+      "loro hanno scelto"
+    ],
+    "imperfect": [
+      "io sceglievo",
+      "tu sceglievi",
+      "lui sceglieva",
+      "lei sceglieva",
+      "noi sceglievamo",
+      "voi sceglievate",
+      "loro sceglievano"
+    ],
+    "future": [
+      "io sceglierò/scerrò",
+      "tu sceglierai/scerrai",
+      "lui sceglierà/scerrà",
+      "lei sceglierà/scerrà",
+      "noi sceglieremo/scerremo",
+      "voi sceglierete/scerrete",
+      "loro sceglieranno/scerranno"
+    ]
+  },
+  "scrivere": {
+    "present": [
+      "io scrivo",
+      "tu scrivi",
+      "lui scrive",
+      "lei scrive",
+      "noi scriviamo",
+      "voi scrivete",
+      "loro scrivono"
+    ],
+    "past_perfect": [
+      "io ho scritto",
+      "tu hai scritto",
+      "lui ha scritto",
+      "lei ha scritto",
+      "noi abbiamo scritto",
+      "voi avete scritto",
+      "loro hanno scritto"
+    ],
+    "imperfect": [
+      "io scrivevo",
+      "tu scrivevi",
+      "lui scriveva",
+      "lei scriveva",
+      "noi scrivevamo",
+      "voi scrivevate",
+      "loro scrivevano"
+    ],
+    "future": [
+      "io scriverò",
+      "tu scriverai",
+      "lui scriverà",
+      "lei scriverà",
+      "noi scriveremo",
+      "voi scriverete",
+      "loro scriveranno"
+    ]
+  },
+  "sedere": {
+    "present": [
+      "io siedo/seggo",
+      "tu siedi",
+      "lui siede",
+      "lei siede",
+      "noi sediamo",
+      "voi sedete",
+      "loro siedono/seggono"
+    ],
+    "past_perfect": [
+      "io ho seduto",
+      "tu hai seduto",
+      "lui ha seduto",
+      "lei ha seduto",
+      "noi abbiamo seduto",
+      "voi avete seduto",
+      "loro hanno seduto"
+    ],
+    "imperfect": [
+      "io sedevo",
+      "tu sedevi",
+      "lui sedeva",
+      "lei sedeva",
+      "noi sedevamo",
+      "voi sedevate",
+      "loro sedevano"
+    ],
+    "future": [
+      "io sederò/siederò",
+      "tu sederai/siederai",
+      "lui sederà/siederà",
+      "lei sederà/siederà",
+      "noi sederemo/siederemo",
+      "voi sederete/siederete",
+      "loro sederanno/siederanno"
+    ]
+  },
+  "sentire": {
+    "present": [
+      "io sento",
+      "tu senti",
+      "lui sente",
+      "lei sente",
+      "noi sentiamo",
+      "voi sentite",
+      "loro sentono"
+    ],
+    "past_perfect": [
+      "io ho sentito",
+      "tu hai sentito",
+      "lui ha sentito",
+      "lei ha sentito",
+      "noi abbiamo sentito",
+      "voi avete sentito",
+      "loro hanno sentito"
+    ],
+    "imperfect": [
+      "io sentivo",
+      "tu sentivi",
+      "lui sentiva",
+      "lei sentiva",
+      "noi sentivamo",
+      "voi sentivate",
+      "loro sentivano"
+    ],
+    "future": [
+      "io sentirò",
+      "tu sentirai",
+      "lui sentirà",
+      "lei sentirà",
+      "noi sentiremo",
+      "voi sentirete",
+      "loro sentiranno"
+    ]
+  },
+  "sentirsi": {
+    "present": [
+      "io mi sento",
+      "tu ti senti",
+      "lui si sente",
+      "lei si sente",
+      "noi ci sentiamo",
+      "voi vi sentite",
+      "loro si sentono"
+    ],
+    "past_perfect": [
+      "io mi sono sentita",
+      "io mi sono sentito",
+      "tu ti sei sentita",
+      "tu ti sei sentito",
+      "lui si è sentito",
+      "lei si è sentita",
+      "noi ci siamo sentite",
+      "noi ci siamo sentiti",
+      "voi vi siete sentite",
+      "voi vi siete sentiti",
+      "loro si sono sentite",
+      "loro si sono sentiti"
+    ],
+    "imperfect": [
+      "io mi sentivo",
+      "tu ti sentivi",
+      "lui si sentiva",
+      "lei si sentiva",
+      "noi ci sentivamo",
+      "voi vi sentivate",
+      "loro si sentivano"
+    ],
+    "future": [
+      "io mi sentirò",
+      "tu ti sentirai",
+      "lui si sentirà",
+      "lei si sentirà",
+      "noi ci sentiremo",
+      "voi vi sentirete",
+      "loro si sentiranno"
+    ]
+  },
+  "significare": {
+    "present": [
+      "io significo",
+      "tu significhi",
+      "lui significa",
+      "lei significa",
+      "noi significhiamo",
+      "voi significate",
+      "loro significano"
+    ],
+    "past_perfect": [
+      "io ho significato",
+      "tu hai significato",
+      "lui ha significato",
+      "lei ha significato",
+      "noi abbiamo significato",
+      "voi avete significato",
+      "loro hanno significato"
+    ],
+    "imperfect": [
+      "io significavo",
+      "tu significavi",
+      "lui significava",
+      "lei significava",
+      "noi significavamo",
+      "voi significavate",
+      "loro significavano"
+    ],
+    "future": [
+      "io significherò",
+      "tu significherai",
+      "lui significherà",
+      "lei significherà",
+      "noi significheremo",
+      "voi significherete",
+      "loro significheranno"
+    ]
+  },
+  "sperare": {
+    "present": [
+      "io spero",
+      "tu speri",
+      "lui spera",
+      "lei spera",
+      "noi speriamo",
+      "voi sperate",
+      "loro sperano"
+    ],
+    "past_perfect": [
+      "io ho sperato",
+      "tu hai sperato",
+      "lui ha sperato",
+      "lei ha sperato",
+      "noi abbiamo sperato",
+      "voi avete sperato",
+      "loro hanno sperato"
+    ],
+    "imperfect": [
+      "io speravo",
+      "tu speravi",
+      "lui sperava",
+      "lei sperava",
+      "noi speravamo",
+      "voi speravate",
+      "loro speravano"
+    ],
+    "future": [
+      "io spererò",
+      "tu spererai",
+      "lui spererà",
+      "lei spererà",
+      "noi spereremo",
+      "voi spererete",
+      "loro spereranno"
+    ]
+  },
+  "spiegare": {
+    "present": [
+      "io spiego",
+      "tu spieghi",
+      "lui spiega",
+      "lei spiega",
+      "noi spieghiamo",
+      "voi spiegate",
+      "loro spiegano"
+    ],
+    "past_perfect": [
+      "io ho spiegato",
+      "tu hai spiegato",
+      "lui ha spiegato",
+      "lei ha spiegato",
+      "noi abbiamo spiegato",
+      "voi avete spiegato",
+      "loro hanno spiegato"
+    ],
+    "imperfect": [
+      "io spiegavo",
+      "tu spiegavi",
+      "lui spiegava",
+      "lei spiegava",
+      "noi spiegavamo",
+      "voi spiegavate",
+      "loro spiegavano"
+    ],
+    "future": [
+      "io spiegherò",
+      "tu spiegherai",
+      "lui spiegherà",
+      "lei spiegherà",
+      "noi spiegheremo",
+      "voi spiegherete",
+      "loro spiegheranno"
+    ]
+  },
+  "spingere": {
+    "present": [
+      "io spingo",
+      "tu spingi",
+      "lui spinge",
+      "lei spinge",
+      "noi spingiamo",
+      "voi spingete",
+      "loro spingono"
+    ],
+    "past_perfect": [
+      "io ho spinto",
+      "tu hai spinto",
+      "lui ha spinto",
+      "lei ha spinto",
+      "noi abbiamo spinto",
+      "voi avete spinto",
+      "loro hanno spinto"
+    ],
+    "imperfect": [
+      "io spingevo",
+      "tu spingevi",
+      "lui spingeva",
+      "lei spingeva",
+      "noi spingevamo",
+      "voi spingevate",
+      "loro spingevano"
+    ],
+    "future": [
+      "io spingerò",
+      "tu spingerai",
+      "lui spingerà",
+      "lei spingerà",
+      "noi spingeremo",
+      "voi spingerete",
+      "loro spingeranno"
+    ]
+  },
+  "stare": {
+    "present": [
+      "io sto",
+      "tu stai",
+      "lui sta",
+      "lei sta",
+      "noi stiamo",
+      "voi state",
+      "loro stanno"
+    ],
+    "past_perfect": [
+      "io sono stata",
+      "io sono stato",
+      "tu sei stata",
+      "tu sei stato",
+      "lui è stato",
+      "lei è stata",
+      "noi siamo state",
+      "noi siamo stati",
+      "voi siete state",
+      "voi siete stati",
+      "loro sono state",
+      "loro sono stati"
+    ],
+    "imperfect": [
+      "io stavo",
+      "tu stavi",
+      "lui stava",
+      "lei stava",
+      "noi stavamo",
+      "voi stavate",
+      "loro stavano"
+    ],
+    "future": [
+      "io starò",
+      "tu starai",
+      "lui starà",
+      "lei starà",
+      "noi staremo",
+      "voi starete",
+      "loro staranno"
+    ]
+  },
+  "studiare": {
+    "present": [
+      "io studio",
+      "tu studi",
+      "lui studia",
+      "lei studia",
+      "noi studiamo",
+      "voi studiate",
+      "loro studiano"
+    ],
+    "past_perfect": [
+      "io ho studiato",
+      "tu hai studiato",
+      "lui ha studiato",
+      "lei ha studiato",
+      "noi abbiamo studiato",
+      "voi avete studiato",
+      "loro hanno studiato"
+    ],
+    "imperfect": [
+      "io studiavo",
+      "tu studiavi",
+      "lui studiava",
+      "lei studiava",
+      "noi studiavamo",
+      "voi studiavate",
+      "loro studiavano"
+    ],
+    "future": [
+      "io studierò",
+      "tu studierai",
+      "lui studierà",
+      "lei studierà",
+      "noi studieremo",
+      "voi studierete",
+      "loro studieranno"
+    ]
+  },
+  "succedere": {
+    "present": [
+      "io succedo",
+      "tu succedi",
+      "lui succede",
+      "lei succede",
+      "noi succediamo",
+      "voi succedete",
+      "loro succedono"
+    ],
+    "past_perfect": [
+      "io ho succedso/succeduto",
+      "tu hai succedso/succeduto",
+      "lui ha succedso/succeduto",
+      "lei ha succedso/succeduto",
+      "noi abbiamo succedso/succeduto",
+      "voi avete succedso/succeduto",
+      "loro hanno succedso/succeduto"
+    ],
+    "imperfect": [
+      "io succedevo",
+      "tu succedevi",
+      "lui succedeva",
+      "lei succedeva",
+      "noi succedevamo",
+      "voi succedevate",
+      "loro succedevano"
+    ],
+    "future": [
+      "io succederò",
+      "tu succederai",
+      "lui succederà",
+      "lei succederà",
+      "noi succederemo",
+      "voi succederete",
+      "loro succederanno"
+    ]
+  },
+  "svestire": {
+    "present": [
+      "io svesto",
+      "tu svesti",
+      "lui sveste",
+      "lei sveste",
+      "noi svestiamo",
+      "voi svestite",
+      "loro svestono"
+    ],
+    "past_perfect": [
+      "io ho svestito",
+      "tu hai svestito",
+      "lui ha svestito",
+      "lei ha svestito",
+      "noi abbiamo svestito",
+      "voi avete svestito",
+      "loro hanno svestito"
+    ],
+    "imperfect": [
+      "io svestivo",
+      "tu svestivi",
+      "lui svestiva",
+      "lei svestiva",
+      "noi svestivamo",
+      "voi svestivate",
+      "loro svestivano"
+    ],
+    "future": [
+      "io svestirò",
+      "tu svestirai",
+      "lui svestirà",
+      "lei svestirà",
+      "noi svestiremo",
+      "voi svestirete",
+      "loro svestiranno"
+    ]
+  },
+  "tagliare": {
+    "present": [
+      "io taglio",
+      "tu tagli",
+      "lui taglia",
+      "lei taglia",
+      "noi tagliamo",
+      "voi tagliate",
+      "loro tagliano"
+    ],
+    "past_perfect": [
+      "io ho tagliato",
+      "tu hai tagliato",
+      "lui ha tagliato",
+      "lei ha tagliato",
+      "noi abbiamo tagliato",
+      "voi avete tagliato",
+      "loro hanno tagliato"
+    ],
+    "imperfect": [
+      "io tagliavo",
+      "tu tagliavi",
+      "lui tagliava",
+      "lei tagliava",
+      "noi tagliavamo",
+      "voi tagliavate",
+      "loro tagliavano"
+    ],
+    "future": [
+      "io taglierò",
+      "tu taglierai",
+      "lui taglierà",
+      "lei taglierà",
+      "noi taglieremo",
+      "voi taglierete",
+      "loro taglieranno"
+    ]
+  },
+  "tenere": {
+    "present": [
+      "io tengo",
+      "tu tieni",
+      "lui tiene",
+      "lei tiene",
+      "noi teniamo",
+      "voi tenete",
+      "loro tengono"
+    ],
+    "past_perfect": [
+      "io ho tenuto",
+      "tu hai tenuto",
+      "lui ha tenuto",
+      "lei ha tenuto",
+      "noi abbiamo tenuto",
+      "voi avete tenuto",
+      "loro hanno tenuto"
+    ],
+    "imperfect": [
+      "io tenevo",
+      "tu tenevi",
+      "lui teneva",
+      "lei teneva",
+      "noi tenevamo",
+      "voi tenevate",
+      "loro tenevano"
+    ],
+    "future": [
+      "io terrò",
+      "tu terrai",
+      "lui terrà",
+      "lei terrà",
+      "noi terremo",
+      "voi terrete",
+      "loro terranno"
+    ]
+  },
+  "tirare": {
+    "present": [
+      "io tiro",
+      "tu tiri",
+      "lui tira",
+      "lei tira",
+      "noi tiriamo",
+      "voi tirate",
+      "loro tirano"
+    ],
+    "past_perfect": [
+      "io ho tirato",
+      "tu hai tirato",
+      "lui ha tirato",
+      "lei ha tirato",
+      "noi abbiamo tirato",
+      "voi avete tirato",
+      "loro hanno tirato"
+    ],
+    "imperfect": [
+      "io tiravo",
+      "tu tiravi",
+      "lui tirava",
+      "lei tirava",
+      "noi tiravamo",
+      "voi tiravate",
+      "loro tiravano"
+    ],
+    "future": [
+      "io tirerò",
+      "tu tirerai",
+      "lui tirerà",
+      "lei tirerà",
+      "noi tireremo",
+      "voi tirerete",
+      "loro tireranno"
+    ]
+  },
+  "toccare": {
+    "present": [
+      "io tocco",
+      "tu tocchi",
+      "lui tocca",
+      "lei tocca",
+      "noi tocchiamo",
+      "voi toccate",
+      "loro toccano"
+    ],
+    "past_perfect": [
+      "io ho toccato",
+      "tu hai toccato",
+      "lui ha toccato",
+      "lei ha toccato",
+      "noi abbiamo toccato",
+      "voi avete toccato",
+      "loro hanno toccato"
+    ],
+    "imperfect": [
+      "io toccavo",
+      "tu toccavi",
+      "lui toccava",
+      "lei toccava",
+      "noi toccavamo",
+      "voi toccavate",
+      "loro toccavano"
+    ],
+    "future": [
+      "io toccherò",
+      "tu toccherai",
+      "lui toccherà",
+      "lei toccherà",
+      "noi toccheremo",
+      "voi toccherete",
+      "loro toccheranno"
+    ]
+  },
+  "tornare": {
+    "present": [
+      "io torno",
+      "tu torni",
+      "lui torna",
+      "lei torna",
+      "noi torniamo",
+      "voi tornate",
+      "loro tornano"
+    ],
+    "past_perfect": [
+      "io ho tornato",
+      "tu hai tornato",
+      "lui ha tornato",
+      "lei ha tornato",
+      "noi abbiamo tornato",
+      "voi avete tornato",
+      "loro hanno tornato"
+    ],
+    "imperfect": [
+      "io tornavo",
+      "tu tornavi",
+      "lui tornava",
+      "lei tornava",
+      "noi tornavamo",
+      "voi tornavate",
+      "loro tornavano"
+    ],
+    "future": [
+      "io tornerò",
+      "tu tornerai",
+      "lui tornerà",
+      "lei tornerà",
+      "noi torneremo",
+      "voi tornerete",
+      "loro torneranno"
+    ]
+  },
+  "tradurre": {
+    "present": [
+      "io traduco",
+      "tu traduci",
+      "lui traduce",
+      "lei traduce",
+      "noi traduciamo",
+      "voi traducete",
+      "loro traducono"
+    ],
+    "past_perfect": [
+      "io ho tradotto",
+      "tu hai tradotto",
+      "lui ha tradotto",
+      "lei ha tradotto",
+      "noi abbiamo tradotto",
+      "voi avete tradotto",
+      "loro hanno tradotto"
+    ],
+    "imperfect": [
+      "io traducevo",
+      "tu traducevi",
+      "lui traduceva",
+      "lei traduceva",
+      "noi traducevamo",
+      "voi traducevate",
+      "loro traducevano"
+    ],
+    "future": [
+      "io tradurrò",
+      "tu tradurrai",
+      "lui tradurrà",
+      "lei tradurrà",
+      "noi tradurremo",
+      "voi tradurrete",
+      "loro tradurranno"
+    ]
+  },
+  "trovare": {
+    "present": [
+      "io trovo",
+      "tu trovi",
+      "lui trova",
+      "lei trova",
+      "noi troviamo",
+      "voi trovate",
+      "loro trovano"
+    ],
+    "past_perfect": [
+      "io ho trovato",
+      "tu hai trovato",
+      "lui ha trovato",
+      "lei ha trovato",
+      "noi abbiamo trovato",
+      "voi avete trovato",
+      "loro hanno trovato"
+    ],
+    "imperfect": [
+      "io trovavo",
+      "tu trovavi",
+      "lui trovava",
+      "lei trovava",
+      "noi trovavamo",
+      "voi trovavate",
+      "loro trovavano"
+    ],
+    "future": [
+      "io troverò",
+      "tu troverai",
+      "lui troverà",
+      "lei troverà",
+      "noi troveremo",
+      "voi troverete",
+      "loro troveranno"
+    ]
+  },
+  "usare": {
+    "present": [
+      "io uso",
+      "tu usi",
+      "lui usa",
+      "lei usa",
+      "noi usiamo",
+      "voi usate",
+      "loro usano"
+    ],
+    "past_perfect": [
+      "io ho usato",
+      "tu hai usato",
+      "lui ha usato",
+      "lei ha usato",
+      "noi abbiamo usato",
+      "voi avete usato",
+      "loro hanno usato"
+    ],
+    "imperfect": [
+      "io usavo",
+      "tu usavi",
+      "lui usava",
+      "lei usava",
+      "noi usavamo",
+      "voi usavate",
+      "loro usavano"
+    ],
+    "future": [
+      "io userò",
+      "tu userai",
+      "lui userà",
+      "lei userà",
+      "noi useremo",
+      "voi userete",
+      "loro useranno"
+    ]
+  },
+  "vedere": {
+    "present": [
+      "io vedo/veggo",
+      "tu vedi",
+      "lui vede",
+      "lei vede",
+      "noi vediamo",
+      "voi vedete",
+      "loro vedono/veggono"
+    ],
+    "past_perfect": [
+      "io ho veduto/visto",
+      "tu hai veduto/visto",
+      "lui ha veduto/visto",
+      "lei ha veduto/visto",
+      "noi abbiamo veduto/visto",
+      "voi avete veduto/visto",
+      "loro hanno veduto/visto"
+    ],
+    "imperfect": [
+      "io vedevo",
+      "tu vedevi",
+      "lui vedeva",
+      "lei vedeva",
+      "noi vedevamo",
+      "voi vedevate",
+      "loro vedevano"
+    ],
+    "future": [
+      "io vedrò",
+      "tu vedrai",
+      "lui vedrà",
+      "lei vedrà",
+      "noi vedremo",
+      "voi vedrete",
+      "loro vedranno"
+    ]
+  },
+  "vendere": {
+    "present": [
+      "io vendo",
+      "tu vendi",
+      "lui vende",
+      "lei vende",
+      "noi vendiamo",
+      "voi vendete",
+      "loro vendono"
+    ],
+    "past_perfect": [
+      "io ho venduto",
+      "tu hai venduto",
+      "lui ha venduto",
+      "lei ha venduto",
+      "noi abbiamo venduto",
+      "voi avete venduto",
+      "loro hanno venduto"
+    ],
+    "imperfect": [
+      "io vendevo",
+      "tu vendevi",
+      "lui vendeva",
+      "lei vendeva",
+      "noi vendevamo",
+      "voi vendevate",
+      "loro vendevano"
+    ],
+    "future": [
+      "io venderò",
+      "tu venderai",
+      "lui venderà",
+      "lei venderà",
+      "noi venderemo",
+      "voi venderete",
+      "loro venderanno"
+    ]
+  },
+  "venire": {
+    "present": [
+      "io vengo",
+      "tu vieni",
+      "lui viene",
+      "lei viene",
+      "noi veniamo",
+      "voi venite",
+      "loro vengono"
+    ],
+    "past_perfect": [
+      "io sono venuta",
+      "io sono venuto",
+      "tu sei venuta",
+      "tu sei venuto",
+      "lui è venuto",
+      "lei è venuta",
+      "noi siamo venute",
+      "noi siamo venuti",
+      "voi siete venute",
+      "voi siete venuti",
+      "loro sono venute",
+      "loro sono venuti"
+    ],
+    "imperfect": [
+      "io venivo",
+      "tu venivi",
+      "lui veniva",
+      "lei veniva",
+      "noi venivamo",
+      "voi venivate",
+      "loro venivano"
+    ],
+    "future": [
+      "io verrò",
+      "tu verrai",
+      "lui verrà",
+      "lei verrà",
+      "noi verremo",
+      "voi verrete",
+      "loro verranno"
+    ]
+  },
+  "vestire": {
+    "present": [
+      "io vesto",
+      "tu vesti",
+      "lui veste",
+      "lei veste",
+      "noi vestiamo",
+      "voi vestite",
+      "loro vestono"
+    ],
+    "past_perfect": [
+      "io ho vestito",
+      "tu hai vestito",
+      "lui ha vestito",
+      "lei ha vestito",
+      "noi abbiamo vestito",
+      "voi avete vestito",
+      "loro hanno vestito"
+    ],
+    "imperfect": [
+      "io vestivo",
+      "tu vestivi",
+      "lui vestiva",
+      "lei vestiva",
+      "noi vestivamo",
+      "voi vestivate",
+      "loro vestivano"
+    ],
+    "future": [
+      "io vestirò",
+      "tu vestirai",
+      "lui vestirà",
+      "lei vestirà",
+      "noi vestiremo",
+      "voi vestirete",
+      "loro vestiranno"
+    ]
+  },
+  "viaggiare": {
+    "present": [
+      "io viaggio",
+      "tu viaggi",
+      "lui viaggia",
+      "lei viaggia",
+      "noi viaggiamo",
+      "voi viaggiate",
+      "loro viaggiano"
+    ],
+    "past_perfect": [
+      "io ho viaggiato",
+      "tu hai viaggiato",
+      "lui ha viaggiato",
+      "lei ha viaggiato",
+      "noi abbiamo viaggiato",
+      "voi avete viaggiato",
+      "loro hanno viaggiato"
+    ],
+    "imperfect": [
+      "io viaggiavo",
+      "tu viaggiavi",
+      "lui viaggiava",
+      "lei viaggiava",
+      "noi viaggiavamo",
+      "voi viaggiavate",
+      "loro viaggiavano"
+    ],
+    "future": [
+      "io viaggerò",
+      "tu viaggerai",
+      "lui viaggerà",
+      "lei viaggerà",
+      "noi viaggeremo",
+      "voi viaggerete",
+      "loro viaggeranno"
+    ]
+  },
+  "vivere": {
+    "present": [
+      "io vivo",
+      "tu vivi",
+      "lui vive",
+      "lei vive",
+      "noi viviamo",
+      "voi vivete",
+      "loro vivono"
+    ],
+    "past_perfect": [
+      "io ho vissuto/vivuto/visso",
+      "tu hai vissuto/vivuto/visso",
+      "lui ha vissuto/vivuto/visso",
+      "lei ha vissuto/vivuto/visso",
+      "noi abbiamo vissuto/vivuto/visso",
+      "voi avete vissuto/vivuto/visso",
+      "loro hanno vissuto/vivuto/visso"
+    ],
+    "imperfect": [
+      "io vivevo",
+      "tu vivevi",
+      "lui viveva",
+      "lei viveva",
+      "noi vivevamo",
+      "voi vivevate",
+      "loro vivevano"
+    ],
+    "future": [
+      "io vivrò",
+      "tu vivrai",
+      "lui vivrà",
+      "lei vivrà",
+      "noi vivremo",
+      "voi vivrete",
+      "loro vivranno"
+    ]
+  },
+  "volere": {
+    "present": [
+      "io voglio/vò",
+      "tu vuoi",
+      "lui vuole",
+      "lei vuole",
+      "noi vogliamo",
+      "voi volete",
+      "loro vogliono"
+    ],
+    "past_perfect": [
+      "io ho voluto",
+      "tu hai voluto",
+      "lui ha voluto",
+      "lei ha voluto",
+      "noi abbiamo voluto",
+      "voi avete voluto",
+      "loro hanno voluto"
+    ],
+    "imperfect": [
+      "io volevo",
+      "tu volevi",
+      "lui voleva",
+      "lei voleva",
+      "noi volevamo",
+      "voi volevate",
+      "loro volevano"
+    ],
+    "future": [
+      "io vorrò",
+      "tu vorrai",
+      "lui vorrà",
+      "lei vorrà",
+      "noi vorremo",
+      "voi vorrete",
+      "loro vorranno"
+    ]
+  }
+}

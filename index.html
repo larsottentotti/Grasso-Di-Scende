@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#4F46E5">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Grasso di scende">
+<title>Grasso di scende</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-v2-192.png">
+<link rel="apple-touch-icon" href="icon-v2-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="toast" class="toast" hidden></div>
+
+<!-- ============================================================
+     SETUP VIEW
+     ============================================================ -->
+<main id="view-setup" class="view">
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">Gd</span>
+      <div>
+        <h1>Grasso di scende</h1>
+        <p class="brand-sub">Nederlands ⇄ Italiano</p>
+      </div>
+    </div>
+    <button id="btn-dark-toggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+  </header>
+
+  <section class="card daily-card" id="daily-card">
+    <div class="daily-head">
+      <h2 class="card-title">Daily 10</h2>
+      <span id="dh-status" class="daily-status"></span>
+    </div>
+    <div class="daily-stats">
+      <div class="stat"><span class="stat-num streak" id="dh-streak">0</span><span class="stat-label">day streak</span></div>
+      <div class="stat"><span class="stat-num" id="dh-year">0</span><span class="stat-label">this year</span></div>
+      <div class="stat"><span class="stat-num" id="dh-30">0</span><span class="stat-label">last 30 days</span></div>
+    </div>
+    <div class="strip" id="dh-strip" aria-label="Last 30 days"></div>
+    <p class="daily-total">Total games finished: <b id="dh-total">0</b></p>
+    <label class="row-toggle daily-conj">
+      <span>Conjugate verbs</span>
+      <input type="checkbox" id="dh-conj" checked>
+    </label>
+    <button id="dh-start" class="primary-btn">Play today's 10</button>
+    <button id="dh-practice" class="link-btn" hidden>Get 10 new words</button>
+    <p class="hint">10 words from all your Italian decks. You can miss one day a week and keep your streak. A game with new words also counts, once per day.</p>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Deck</h2>
+    <div id="set-list" class="set-list"></div>
+    <button id="btn-import" class="link-btn">+ Import vocab or verbs</button>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Direction</h2>
+    <div class="segmented" id="direction-segmented">
+      <button data-value="forward" class="segmented-btn active"></button>
+      <button data-value="reverse" class="segmented-btn"></button>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Mode</h2>
+    <div class="segmented" id="mode-segmented">
+      <button data-value="multiple" class="segmented-btn active">Multiple Choice</button>
+      <button data-value="type" class="segmented-btn">Type Answer</button>
+    </div>
+  </section>
+
+  <section class="card" id="verb-options-card" hidden>
+    <label class="row-toggle">
+      <span>Conjugate Italian verbs</span>
+      <input type="checkbox" id="chk-conjugate" checked>
+    </label>
+    <div id="tense-options" class="tense-grid"></div>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Backup</h2>
+    <p class="hint">Saves your streak, stats and decks to a file, so you can restore them after reinstalling.</p>
+    <button id="btn-backup-export" class="link-btn">⬇ Save backup file</button>
+    <label class="link-btn backup-restore">⬆ Restore from backup file
+      <input type="file" id="file-backup" accept=".json,application/json" hidden>
+    </label>
+  </section>
+
+  <button id="btn-start" class="primary-btn">Start studying</button>
+
+</main>
+
+<!-- ============================================================
+     QUIZ VIEW
+     ============================================================ -->
+<main id="view-quiz" class="view" hidden>
+
+  <header class="quiz-header">
+    <button id="btn-quiz-back" class="icon-btn" aria-label="Back to setup">←</button>
+    <div class="score">
+      <span class="score-correct" id="score-correct">0</span>
+      <span class="score-sep">/</span>
+      <span class="score-wrong" id="score-wrong">0</span>
+    </div>
+    <button id="btn-quiz-stats" class="icon-btn" aria-label="Word stats">📊</button>
+  </header>
+
+  <p class="tense-pill" id="tense-pill" hidden></p>
+
+  <section class="flashcard">
+    <button id="btn-speak-question" class="speak-btn" hidden aria-label="Pronounce question">🔊</button>
+    <p id="question-text" class="question-text"></p>
+    <p id="feedback-text" class="feedback-text"></p>
+    <button id="btn-speak-answer" class="speak-btn speak-answer" hidden aria-label="Pronounce answer">🔊</button>
+  </section>
+
+  <div id="choice-area" class="choice-area" hidden></div>
+
+  <div id="type-area" class="type-area" hidden>
+    <div class="type-input-row">
+      <span id="person-label" class="person-label"></span>
+      <input id="type-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type your answer…">
+    </div>
+    <button id="btn-check" class="primary-btn">Check answer</button>
+  </div>
+
+  <button id="btn-next" class="primary-btn secondary" hidden>Next word →</button>
+
+  <div class="bottom-row">
+    <button id="btn-restart" class="ghost-btn">↻ Restart</button>
+    <button id="btn-settings" class="ghost-btn">⚙ Settings</button>
+  </div>
+
+</main>
+
+<!-- ============================================================
+     STATS VIEW
+     ============================================================ -->
+<main id="view-stats" class="view" hidden>
+  <header class="topbar">
+    <button id="btn-stats-back" class="icon-btn" aria-label="Back">←</button>
+    <h1>Word stats</h1>
+    <span class="icon-btn placeholder"></span>
+  </header>
+  <p class="hint">Sorted by times wrong, highest first — <span id="stats-set-name"></span></p>
+  <div id="stats-list" class="stats-list"></div>
+</main>
+
+<!-- ============================================================
+     IMPORT VIEW
+     ============================================================ -->
+<main id="view-import" class="view" hidden>
+  <header class="topbar">
+    <button id="btn-import-back" class="icon-btn" aria-label="Back">←</button>
+    <h1>Import</h1>
+    <span class="icon-btn placeholder"></span>
+  </header>
+
+  <section class="card">
+    <h2 class="card-title">Vocab / verb CSV</h2>
+    <p class="hint">Same format as your desktop app: a "Nederlands"/"Dutch" column, a language column, and optional Type/Auxiliary columns.</p>
+    <input type="file" id="file-csv" accept=".csv,text/csv">
+    <div id="csv-preview" class="hint"></div>
+  </section>
+
+  <section class="card">
+    <h2 class="card-title">Conjugations JSON</h2>
+    <p class="hint">The file produced by <code>export_conjugations.py</code>. Needed only for new Italian verbs.</p>
+    <input type="file" id="file-conj" accept=".json,application/json">
+    <div id="conj-preview" class="hint"></div>
+  </section>
+
+  <button id="btn-import-save" class="primary-btn" disabled>Add to app</button>
+</main>
+
+<!-- ============================================================
+     DAILY 10 VIEW
+     ============================================================ -->
+<main id="view-daily" class="view" hidden>
+
+  <header class="quiz-header">
+    <button id="d-back" class="icon-btn" aria-label="Back to home">←</button>
+    <div class="daily-phase">
+      <span id="d-phase" class="daily-phase-title"></span>
+      <span id="d-left" class="daily-phase-left"></span>
+    </div>
+    <span class="icon-btn placeholder"></span>
+  </header>
+
+  <section id="d-intro" class="card intro-card" hidden>
+    <h2 class="card-title">Multiple choice done ✓</h2>
+    <p id="d-intro-text" class="hint"></p>
+    <button id="d-intro-btn" class="primary-btn">Start writing</button>
+  </section>
+
+  <div id="d-play" class="daily-play">
+    <p class="tense-pill" id="d-pill" hidden></p>
+
+    <section class="flashcard">
+      <button id="d-speak-q" class="speak-btn" aria-label="Pronounce question">🔊</button>
+      <p id="d-question" class="question-text"></p>
+      <p id="d-feedback" class="feedback-text"></p>
+      <button id="d-speak-a" class="speak-btn speak-answer" hidden aria-label="Pronounce answer">🔊</button>
+    </section>
+
+    <div id="d-choices" class="choice-area"></div>
+
+    <div id="d-type" class="type-area" hidden>
+      <div class="type-input-row">
+        <span id="d-person" class="person-label"></span>
+        <input id="d-input" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Type the Italian…">
+      </div>
+      <button id="d-check" class="primary-btn">Check answer</button>
+    </div>
+
+    <button id="d-next" class="primary-btn secondary" hidden>Next →</button>
+  </div>
+
+</main>
+
+<!-- ============================================================
+     DAILY 10 DONE VIEW
+     ============================================================ -->
+<main id="view-daily-done" class="view" hidden>
+  <header class="topbar">
+    <button id="dd-back" class="icon-btn" aria-label="Back to home">←</button>
+    <h1 id="dd-title">Done for today</h1>
+    <span class="icon-btn placeholder"></span>
+  </header>
+
+  <p id="dd-sub" class="hint"></p>
+
+  <section class="card">
+    <div class="daily-stats">
+      <div class="stat"><span class="stat-num streak" id="dd-streak">0</span><span class="stat-label">day streak</span></div>
+      <div class="stat"><span class="stat-num" id="dd-year">0</span><span class="stat-label">this year</span></div>
+      <div class="stat"><span class="stat-num" id="dd-30">0</span><span class="stat-label">last 30 days</span></div>
+    </div>
+    <div class="strip" id="dd-strip" aria-label="Last 30 days"></div>
+    <p class="daily-total">Total games finished: <b id="dd-total">0</b></p>
+    <p id="dd-summary" class="hint"></p>
+  </section>
+
+  <h2 class="card-title list-title">Today's words</h2>
+  <div id="dd-words" class="stats-list"></div>
+</main>
+
+<script src="app.js"></script>
+<script src="daily.js"></script>
+<script src="backup.js"></script>
+</body>
+</html>
