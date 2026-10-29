@@ -54,6 +54,32 @@
     <p class="hint">10 words from all your Italian decks. You can miss one day a week and keep your streak. A game with new words also counts, once per day.</p>
   </section>
 
+  <section class="card daily-card" id="recap-card">
+    <div class="daily-head">
+      <h2 class="card-title">Recap</h2>
+      <span id="rh-status" class="daily-status"></span>
+    </div>
+    <div class="daily-stats">
+      <div class="stat"><span class="stat-num streak" id="rh-streak">0</span><span class="stat-label">day streak</span></div>
+      <div class="stat"><span class="stat-num" id="rh-year">0</span><span class="stat-label">this year</span></div>
+      <div class="stat"><span class="stat-num" id="rh-30">0</span><span class="stat-label">last 30 days</span></div>
+    </div>
+    <div class="strip" id="rh-strip" aria-label="Last 30 days"></div>
+    <p class="daily-total">Total recaps finished: <b id="rh-total">0</b></p>
+    <label class="row-toggle daily-conj">
+      <span>Conjugate verbs</span>
+      <input type="checkbox" id="rh-conj" checked>
+    </label>
+    <button id="rh-start" class="primary-btn">Play today's recap</button>
+    <button id="rh-new" class="link-btn">Get 10 new words</button>
+    <p class="hint" id="rh-info"></p>
+    <details class="how">
+      <summary>How are the words picked?</summary>
+      <p>Only words that have already been in the Daily 10 (including its "new words" games) can appear. Every such word gets a score: 1 point, plus up to 4 more depending on your share of wrong answers for that word, counted over the Daily and the Recap. Never wrong = 1, wrong half of the time = 3, always wrong = 5.</p>
+      <p>The 10 words are then drawn one at a time at random. In each draw a word's chance is its score divided by the total score of the words still left. So hard words come up more often, but easy words can still be picked. A word is never picked twice in one game.</p>
+    </details>
+  </section>
+
   <section class="card">
     <h2 class="card-title">Deck</h2>
     <div id="set-list" class="set-list"></div>

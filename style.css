@@ -764,3 +764,7 @@ input[type="file"] {
 .daily-conj { margin-bottom: 12px; }
 
 .backup-restore { display: block; text-align: center; cursor: pointer; }
+
+.how { margin-top: 10px; font-size: 0.85rem; color: var(--secondary); }
+.how summary { cursor: pointer; color: var(--primary); font-weight: 600; }
+.how p { margin: 8px 0 0; line-height: 1.45; }

@@ -29,6 +29,18 @@ const LS_DAILY_HISTORY = "gds.daily.history";
 const LS_DAILY_CONJ = "gds.daily.conjugate";
 const LS_DAILY_TOTAL = "gds.daily.total";
 const LS_DAILY_SESSION = "gds.daily.session";
+const LS_DAILY_SEEN = "gds.daily.seen";   // words met in the Daily 10 + how often each was missed
+
+// The Daily 10 and the Recap are two "modes" of the same game engine.
+// Each has its own history (streak), total, saved game and verb setting.
+const DAILY_KEYS = {
+  daily: { history: LS_DAILY_HISTORY, conj: LS_DAILY_CONJ, total: LS_DAILY_TOTAL, session: LS_DAILY_SESSION },
+  recap: { history: "gds.recap.history", conj: "gds.recap.conjugate", total: "gds.recap.total", session: "gds.recap.session" },
+};
+
+/* ---- Recap: how words are chosen ---- */
+const RECAP_MIN_WORDS = 10;           // the recap unlocks once this many words have been in the Daily game
+const RECAP_STRUGGLE_WEIGHT = 4;      // a word's score = 1 + this x (its share of wrong answers)
 
 const DAILY_KIND_ORDER = { verb: 0, noun: 1, plain: 2 };
 const DAILY_NOUN_ARTICLE_RE = /^(il|lo|la|i|gli|le)\s+|^l'/;
@@ -64,9 +76,9 @@ function dailyToday() {
   return dailyDateKey(dailyClock());
 }
 
-function dailyLoadHistory() {
+function dailyLoadHistory(mode = "daily") {
   try {
-    const raw = JSON.parse(localStorage.getItem(LS_DAILY_HISTORY) || "[]");
+    const raw = JSON.parse(localStorage.getItem(DAILY_KEYS[mode].history) || "[]");
     if (!Array.isArray(raw)) return [];
     return [...new Set(raw.filter(k => /^\d{4}-\d{2}-\d{2}$/.test(k)))].sort();
   } catch (e) {
@@ -74,8 +86,8 @@ function dailyLoadHistory() {
   }
 }
 
-function dailySaveHistory(list) {
-  localStorage.setItem(LS_DAILY_HISTORY, JSON.stringify(list));
+function dailySaveHistory(list, mode = "daily") {
+  localStorage.setItem(DAILY_KEYS[mode].history, JSON.stringify(list));
 }
 
 // Walk back from today (or yesterday if today isn't played yet). A missed
@@ -276,6 +288,79 @@ function dailyPickWords(entries, rng, count) {
 }
 
 /* ============================================================
+   RECAP: which words have been met, and which ones are hard
+   ============================================================ */
+
+function dailyLoadSeen() {
+  try {
+    const o = JSON.parse(localStorage.getItem(LS_DAILY_SEEN) || "{}");
+    return o && typeof o === "object" && !Array.isArray(o) ? o : {};
+  } catch (e) {
+    return {};
+  }
+}
+
+function dailySaveSeen(obj) {
+  try { localStorage.setItem(LS_DAILY_SEEN, JSON.stringify(obj)); } catch (e) { /* ignore */ }
+}
+
+// Called after every answer. A word enters the record the first time the
+// DAILY game asks it. Recap answers only update words already in the record.
+//   a = times asked, w = times answered wrong, d = first date
+function dailyNoteAnswer(entryKey, ok, mode, today) {
+  const seen = dailyLoadSeen();
+  let r = seen[entryKey];
+  if (!r) {
+    if (mode !== "daily") return;
+    r = seen[entryKey] = { a: 0, w: 0, d: today };
+  }
+  r.a += 1;
+  if (!ok) r.w += 1;
+  dailySaveSeen(seen);
+}
+
+// score = 1 + 4 x (wrong answers / times asked)   ->  between 1 and 5
+function recapWeight(rec) {
+  const a = Math.max(1, rec.a | 0);
+  const w = Math.min(a, Math.max(0, rec.w | 0));
+  return 1 + RECAP_STRUGGLE_WEIGHT * (w / a);
+}
+
+// every word that has been in the Daily game and still exists in the decks;
+// one entry per word (if two decks hold the same word, the higher score stays)
+function recapPool(ctx, seen) {
+  const best = new Map();
+  for (const e of ctx.entries) {
+    const rec = seen[e.key];
+    if (!rec) continue;
+    const weight = recapWeight(rec);
+    const cur = best.get(e.lemma);
+    if (!cur || weight > cur.weight) best.set(e.lemma, { entry: e, weight });
+  }
+  return [...best.values()];
+}
+
+// Draws `count` different words, one at a time. A word's chance in each
+// draw = its score / the total score of the words still in the pool.
+function recapPickWords(ctx, seen, rng, count) {
+  const pool = recapPool(ctx, seen)
+    .sort((a, b) => (a.entry.key < b.entry.key ? -1 : 1));   // fixed order -> same pick for the same seed
+  const picked = [];
+
+  while (picked.length < count && pool.length) {
+    const total = pool.reduce((sum, p) => sum + p.weight, 0);
+    let r = rng() * total;
+    let idx = 0;
+    for (; idx < pool.length - 1; idx++) {
+      r -= pool[idx].weight;
+      if (r < 0) break;
+    }
+    picked.push(pool.splice(idx, 1)[0].entry);
+  }
+  return picked;
+}
+
+/* ============================================================
    FORMS: which verb form / singular or plural gets asked
    ============================================================ */
 
@@ -380,12 +465,12 @@ function dailyVerbForm(entry, ctx, wi) {
 
 // "Conjugate verbs" checkbox on the home card (default on). Off = verbs are
 // asked as plain infinitives. Applies to questions made from now on.
-function dailyConjugateOn() {
-  try { return localStorage.getItem(LS_DAILY_CONJ) !== "0"; } catch (e) { return true; }
+function dailyConjugateOn(mode = "daily") {
+  try { return localStorage.getItem(DAILY_KEYS[mode].conj) !== "0"; } catch (e) { return true; }
 }
 
-function dailyMakeForm(entry, ctx, wi) {
-  if (entry.kind === "verb" && dailyConjugateOn()) return dailyVerbForm(entry, ctx, wi);
+function dailyMakeForm(entry, ctx, wi, mode = "daily") {
+  if (entry.kind === "verb" && dailyConjugateOn(mode)) return dailyVerbForm(entry, ctx, wi);
 
   if (entry.kind === "noun") {
     const usePlural = entry.hasPlural && Math.random() < 0.5;
@@ -487,20 +572,20 @@ function dailySaveSession() {
   const s = daily.session;
   if (!s || s.practice) return;
   try {
-    localStorage.setItem(LS_DAILY_SESSION, JSON.stringify(s));
+    localStorage.setItem(DAILY_KEYS[s.mode || "daily"].session, JSON.stringify(s));
   } catch (e) { /* storage full or blocked: the game still works */ }
 }
 
-function dailyClearSession() {
-  try { localStorage.removeItem(LS_DAILY_SESSION); } catch (e) { /* ignore */ }
+function dailyClearSession(mode = "daily") {
+  try { localStorage.removeItem(DAILY_KEYS[mode].session); } catch (e) { /* ignore */ }
 }
 
 // returns today's saved game, or null (and tidies up an old one)
-function dailyLoadSession(today) {
+function dailyLoadSession(today, mode = "daily") {
   let s = null;
-  try { s = JSON.parse(localStorage.getItem(LS_DAILY_SESSION) || "null"); } catch (e) { s = null; }
+  try { s = JSON.parse(localStorage.getItem(DAILY_KEYS[mode].session) || "null"); } catch (e) { s = null; }
   if (!s || s.date !== today || s.practice) {
-    if (s) dailyClearSession();
+    if (s) dailyClearSession(mode);
     return null;
   }
   return s;
@@ -523,21 +608,31 @@ function dailyWordEntry(wi) {
    GAME FLOW  (no screen code in here)
    ============================================================ */
 
-function dailyStart({ practice = false } = {}) {
+function dailyStart({ practice = false, mode = "daily" } = {}) {
   daily.ctx = dailyBuildContext();
 
   const today = dailyToday();
   const seed = practice ? `${today}:${Date.now()}` : today;
-  const picked = dailyPickWords(daily.ctx.entries, dailySeededRng("gds-daily:" + seed), DAILY_WORD_COUNT);
+  let picked;
 
-  if (!picked.length) {
-    toast("No Italian words to practise yet");
-    return;
+  if (mode === "recap") {
+    picked = recapPickWords(daily.ctx, dailyLoadSeen(), dailySeededRng("gds-recap:" + seed), DAILY_WORD_COUNT);
+    if (picked.length < RECAP_MIN_WORDS) {
+      toast(`The recap unlocks once ${RECAP_MIN_WORDS} words have been in the Daily 10`);
+      return;
+    }
+  } else {
+    picked = dailyPickWords(daily.ctx.entries, dailySeededRng("gds-daily:" + seed), DAILY_WORD_COUNT);
+    if (!picked.length) {
+      toast("No Italian words to practise yet");
+      return;
+    }
   }
 
   daily.session = {
     date: today,
     practice,
+    mode,
     words: picked.map(e => ({ setId: e.setId, dutch: e.pair.dutch, other: e.pair.other })),
     phase: "mc",
     queue: dailyBuildQueue(picked.length, DAILY_MC_ROUNDS),
@@ -558,8 +653,9 @@ function dailyResume(saved) {
 
   if (!dailyValidSession(saved, daily.ctx)) {
     // the decks changed under a half-finished game: start today's again
-    dailyClearSession();
-    dailyStart();
+    const mode = saved.mode || "daily";
+    dailyClearSession(mode);
+    dailyStart({ mode });
     return;
   }
 
@@ -583,7 +679,7 @@ function dailyAdvance() {
 
   const wi = s.queue[0];
   const entry = dailyWordEntry(wi);
-  const form = dailyMakeForm(entry, daily.ctx, wi);
+  const form = dailyMakeForm(entry, daily.ctx, wi, s.mode || "daily");
   if (s.phase === "mc") form.choices = dailyBuildChoices(entry, form, daily.ctx);
 
   s.form = form;
@@ -615,6 +711,7 @@ function dailyCommit(ok) {
   const entry = dailyWordEntry(wi);
 
   recordWordResultFor(entry.setId, entry.pair, ok);
+  dailyNoteAnswer(entry.key, ok, s.mode || "daily", s.date);
 
   const prefix = s.phase === "mc" ? "mc" : "w";
   s.totals[prefix + "Asked"] += 1;
@@ -658,31 +755,32 @@ function dailyAnswerTyped(text) {
 
 // Total number of finished games (every finished game counts, extra sets too).
 // Days played before this counter existed are used as the starting value.
-function dailyLoadTotal() {
+function dailyLoadTotal(mode = "daily") {
   let stored = 0;
-  try { stored = parseInt(localStorage.getItem(LS_DAILY_TOTAL), 10) || 0; } catch (e) {}
-  return Math.max(stored, dailyLoadHistory().length);
+  try { stored = parseInt(localStorage.getItem(DAILY_KEYS[mode].total), 10) || 0; } catch (e) {}
+  return Math.max(stored, dailyLoadHistory(mode).length);
 }
-function dailySaveTotal(n) {
-  try { localStorage.setItem(LS_DAILY_TOTAL, String(n)); } catch (e) {}
+function dailySaveTotal(n, mode = "daily") {
+  try { localStorage.setItem(DAILY_KEYS[mode].total, String(n)); } catch (e) {}
 }
 
 function dailyFinish() {
   const s = daily.session;
+  const mode = s.mode || "daily";
   s.phase = "done";
 
   // Any finished game counts for the streak, but only once per day.
-  const newTotal = dailyLoadTotal() + 1;   // read before the history changes
-  const history = dailyLoadHistory();
+  const newTotal = dailyLoadTotal(mode) + 1;   // read before the history changes
+  const history = dailyLoadHistory(mode);
   s.alreadyCounted = history.includes(s.date);
   if (!s.alreadyCounted) {
     history.push(s.date);
     history.sort();
-    dailySaveHistory(history);
+    dailySaveHistory(history, mode);
   }
-  dailySaveTotal(newTotal);
+  dailySaveTotal(newTotal, mode);
 
-  dailyClearSession();
+  dailyClearSession(mode);
   dailyRenderDone();
   showView("view-daily-done");
 }
@@ -695,11 +793,11 @@ function dEl(id) {
   return document.getElementById(id);
 }
 
-function dailyRenderStats(prefix, stats) {
+function dailyRenderStats(prefix, stats, mode = "daily") {
   dEl(prefix + "-streak").textContent = stats.streak;
   dEl(prefix + "-year").textContent = stats.thisYear;
   dEl(prefix + "-30").textContent = stats.last30;
-  dEl(prefix + "-total").textContent = dailyLoadTotal();
+  dEl(prefix + "-total").textContent = dailyLoadTotal(mode);
 
   const strip = dEl(prefix + "-strip");
   strip.innerHTML = "";
@@ -710,8 +808,49 @@ function dailyRenderStats(prefix, stats) {
   });
 }
 
+function renderRecapHome() {
+  const today = dailyToday();
+  const stats = dailyComputeStats(dailyLoadHistory("recap"), today);
+  dailyRenderStats("rh", stats, "recap");
+
+  const met = recapPool(dailyBuildContext(), dailyLoadSeen()).length;
+  const saved = dailyLoadSession(today, "recap");
+  const status = dEl("rh-status");
+  const start = dEl("rh-start");
+  const fresh = dEl("rh-new");
+  const info = dEl("rh-info");
+
+  status.className = "daily-status";
+
+  if (met < RECAP_MIN_WORDS) {
+    status.textContent = "Locked";
+    start.hidden = true;
+    fresh.hidden = true;
+    info.textContent = `Play the Daily 10 first. The recap only uses words you have met there: ${met} of ${RECAP_MIN_WORDS} so far.`;
+    return;
+  }
+
+  info.textContent = `Ten words from the ${met} you have met in the Daily 10. Words you miss more often come up more often.`;
+  fresh.hidden = false;
+
+  if (stats.playedToday) {
+    status.textContent = "Done for today ✓";
+    status.className = "daily-status done";
+    start.hidden = true;
+  } else if (saved) {
+    status.textContent = `${saved.queue.length} to go`;
+    start.textContent = "Continue today's recap";
+    start.hidden = false;
+  } else {
+    status.textContent = stats.streak > 0 ? "Play today to keep your streak" : "";
+    start.textContent = "Play today's recap";
+    start.hidden = false;
+  }
+}
+
 function renderDailyHome() {
   if (!daily.wired) return;
+  renderRecapHome();
 
   const today = dailyToday();
   const stats = dailyComputeStats(dailyLoadHistory(), today);
@@ -753,9 +892,8 @@ function dailyRenderHeader() {
   dEl("d-phase").textContent = s.phase === "mc"
     ? "Multiple choice · Italian → Dutch"
     : "Write it · Dutch → Italian";
-  dEl("d-left").textContent = s.practice
-    ? `Practice · ${s.queue.length} to go`
-    : `${s.queue.length} to go`;
+  const label = (s.mode === "recap" ? "Recap · " : "") + (s.practice ? "New words · " : "");
+  dEl("d-left").textContent = `${label}${s.queue.length} to go`;
 }
 
 function dailyRenderIntro() {
@@ -871,14 +1009,18 @@ function dailyRenderAnswer(ok, given) {
 
 function dailyRenderDone() {
   const s = daily.session;
-  const stats = dailyComputeStats(dailyLoadHistory(), dailyToday());
+  const mode = s.mode || "daily";
+  const isRecap = mode === "recap";
+  const stats = dailyComputeStats(dailyLoadHistory(mode), dailyToday());
 
-  dEl("dd-title").textContent = "Done for today";
+  dEl("dd-title").textContent = isRecap ? "Recap done" : "Done for today";
   dEl("dd-sub").textContent = s.alreadyCounted
     ? "Extra set finished. Your streak already counted today."
-    : "Counted for your streak. Come back tomorrow for 10 new words.";
+    : (isRecap
+        ? "Counted for your recap streak. Come back tomorrow."
+        : "Counted for your streak. Come back tomorrow for 10 new words.");
 
-  dailyRenderStats("dd", stats);
+  dailyRenderStats("dd", stats, mode);
 
   const t = s.totals;
   dEl("dd-summary").textContent =
@@ -938,6 +1080,19 @@ function initDaily() {
   });
 
   dEl("dh-practice").addEventListener("click", () => dailyStart({ practice: true }));
+
+  const rconj = dEl("rh-conj");
+  rconj.checked = dailyConjugateOn("recap");
+  rconj.addEventListener("change", () => {
+    try { localStorage.setItem(DAILY_KEYS.recap.conj, rconj.checked ? "1" : "0"); } catch (e) {}
+  });
+
+  dEl("rh-start").addEventListener("click", () => {
+    const saved = dailyLoadSession(dailyToday(), "recap");
+    if (saved) dailyResume(saved);
+    else dailyStart({ mode: "recap" });
+  });
+  dEl("rh-new").addEventListener("click", () => dailyStart({ mode: "recap", practice: true }));
 
   dEl("d-back").addEventListener("click", () => showView("view-setup"));
   dEl("dd-back").addEventListener("click", () => showView("view-setup"));

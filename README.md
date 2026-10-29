@@ -103,3 +103,17 @@ A daily game on the home screen. Each day it picks 10 words from all Italian dec
 ## Backup
 
 The Backup card on the home screen saves everything stored on the phone (decks, stats, streak, settings) to a `.json` file and restores it again. Use it before clearing site data or reinstalling.
+
+## Recap
+
+A second game under the Daily card, with its own streak, year/30-day counters, total, saved game, "Get 10 new words" button and "Conjugate verbs" checkbox. Same two parts as the Daily 10 (multiple choice twice, then writing, +2 repeats on a miss, max 3 waiting).
+
+**Which words?** Only words that have already been asked in the Daily 10 (its "new words" games count too). The app keeps a record of every such word: how often it was asked and how often it was wrong (`gds.daily.seen`). Recap answers update that record but never add words to it.
+
+**How are the 10 chosen?** Every word gets a score `1 + 4 x (wrong answers / times asked)`, so between 1 (never wrong) and 5 (always wrong); half wrong = 3. The 10 words are drawn one at a time: in each draw a word's chance is its score divided by the total score of the words still left. Hard words come up more often, easy words can still be picked, and a word is never picked twice in one game. The numbers sit at the top of `daily.js` (`RECAP_MIN_WORDS`, `RECAP_STRUGGLE_WEIGHT`).
+
+The Recap unlocks once at least 10 different words have been in the Daily 10. Words whose entry was changed in a deck update are no longer recognised and drop out of the record.
+
+## Backup
+
+The record of met words and the recap streak are included in the backup file as well.
