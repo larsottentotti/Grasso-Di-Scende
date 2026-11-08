@@ -115,6 +115,60 @@ function expandAlternates(text) {
     .filter(Boolean);
 }
 
+// Dutch meanings of an Italian text when it is read as a conjugated verb
+// form of ANY tense or person, e.g. "sei" (you are) -> "zijn". Used so
+// that a word like "sei" (six / you are) never gets two right options.
+function verbFormMeanings(text) {
+  const target = String(text || "").trim().toLowerCase();
+  const out = [];
+  if (!target) return out;
+
+  for (const set of state.sets) {
+    if (!ITALIAN_NAMES.has(normalizeHeader(set.language2))) continue;
+    for (const pair of set.pairs) {
+      if (!isVerbPair(pair)) continue;
+      const { base, remainder } = splitInfinitive(pair.other);
+      if (!state.conjugations[base]) continue;
+
+      let hit = false;
+      for (const t of TENSES) {
+        for (const raw of getBaseForms(base, t.key) || []) {
+          const person = getPersonPrefix(raw);
+          for (const alt of expandAlternates(stripPersonPrefix(raw, person))) {
+            if (attachRemainder(alt, remainder).toLowerCase() === target) hit = true;
+          }
+        }
+      }
+      if (hit) for (const d of getTranslations(pair.dutch)) if (!out.includes(d)) out.push(d);
+    }
+  }
+  return out;
+}
+
+// All accepted answers for the current card: its own translations plus the
+// translations of every other word (in any deck of the same language pair)
+// that has the same question text, e.g. "zijn" -> suo AND essere.
+function crossDeckAnswers(set, qField, aField) {
+  const own = getTranslations(state.currentPair[aField]);
+  const out = own.slice();
+  const qTokens = getTranslations(state.currentPair[qField]).map(t => t.toLowerCase());
+  if (!qTokens.length) return out;
+
+  for (const s of state.sets) {
+    if (normalizeHeader(s.language1) !== normalizeHeader(set.language1)) continue;
+    if (normalizeHeader(s.language2) !== normalizeHeader(set.language2)) continue;
+    for (const p of s.pairs) {
+      if (p === state.currentPair) continue;
+      const hit = getTranslations(p[qField]).some(t => qTokens.includes(t.toLowerCase()));
+      if (!hit) continue;
+      for (const a of getTranslations(p[aField])) {
+        if (!out.some(o => o.toLowerCase() === a.toLowerCase())) out.push(a);
+      }
+    }
+  }
+  return out;
+}
+
 function findFormForPerson(forms, person) {
   if (!person || !forms) return null;
   for (const f of forms) {
@@ -453,7 +507,7 @@ function computeCorrectAnswers() {
     const alternates = expandAlternates(strippedRaw);
     state.correctAnswers = alternates.map(a => attachRemainder(a, state.currentRemainder));
   } else {
-    state.correctAnswers = getTranslations(state.currentPair[field]);
+    state.correctAnswers = crossDeckAnswers(set, questionField(), field);
   }
 }
 
@@ -512,6 +566,10 @@ function buildChoices() {
   } else {
     const field = answerField();
     const correctLower = state.correctAnswers.map(a => a.toLowerCase());
+    // "sei" is six AND a form of "to be": never offer both as options
+    if (isItalianField(set, questionField())) {
+      verbFormMeanings(state.currentPair[questionField()]).forEach(m => correctLower.push(m.toLowerCase()));
+    }
     const candidates = shuffle(set.pairs.filter(p => p !== state.currentPair));
 
     for (const p of candidates) {
@@ -783,10 +841,13 @@ function finishCard(isCorrect, displayCorrectAnswer) {
   recordWordResult(isCorrect);
   updateScoreDisplay();
 
+  // show every accepted answer, e.g. "zijn" = suo / essere
+  const all = [...new Set(state.correctAnswers)];
+  const shown = all.length > 1 ? all.join(" / ") : displayCorrectAnswer;
   const feedback = document.getElementById("feedback-text");
   feedback.textContent = isCorrect
-    ? "Correct!"
-    : `Not quite — ${displayCorrectAnswer}`;
+    ? (all.length > 1 ? `Correct!\nAll correct answers: ${shown}` : "Correct!")
+    : `Not quite — ${shown}`;
   feedback.className = "feedback-text " + (isCorrect ? "correct" : "wrong");
 
   const set = getCurrentSet();

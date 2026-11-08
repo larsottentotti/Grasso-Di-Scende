@@ -93,7 +93,9 @@ A daily game on the home screen. Each day it picks 10 words from all Italian dec
 - **Counters:** streak, done this year, done in the last 30 days (plus a 30-day strip). A day counts when both parts are finished.
 - **Streak rule:** one missed day in any 7 days is forgiven. Two misses within 7 days break the streak.
 - **Get 10 new words** (shown on the home card at all times) gives a fresh set of 10. Finishing it counts for the streak if you haven't finished a game yet today. The streak counts at most once per day.
-- **Total games finished** counts every finished game, extra sets included.
+- **Total played** (4th block next to the streak, year and 30-day blocks) counts every finished game, extra sets included.
+- **New words:** the first Daily 10 of the day always contains at least 4 words that were never asked in a Daily game before (`DAILY_MIN_NEW_WORDS`). When fewer than 4 new words are left, a red note on the Daily card says so, so you can add words or update the app; the game then uses all the new words that remain.
+- **Words with several meanings:** a word like `sei` (six / you are) never shows both readings as options in multiple choice. In writing, every accepted translation counts (`zijn` = suo or essere, `zij` = lei or loro), and after each answer the screen lists all correct answers. The same goes for the normal study mode.
 - An unfinished game is saved; closing the app and reopening continues where you stopped.
 - Tunable numbers sit at the top of `daily.js`.
 - Plurals come from the `dutchPl`/`otherPl` fields in `vocab.json`. Imported decks are asked in the singular only.
@@ -106,7 +108,7 @@ The Backup card on the home screen saves everything stored on the phone (decks, 
 
 ## Recap
 
-A second game under the Daily card, with its own streak, year/30-day counters, total, saved game, "Get 10 new words" button and "Conjugate verbs" checkbox. Same two parts as the Daily 10 (multiple choice twice, then writing, +2 repeats on a miss, max 3 waiting).
+A second game under the Daily card, with its own streak, year/30-day counters, total played, saved game, "Get 10 new words" button and "Conjugate verbs" checkbox. Same two parts as the Daily 10 (multiple choice twice, then writing, +2 repeats on a miss, max 3 waiting).
 
 **Which words?** Only words that have already been asked in the Daily 10 (its "new words" games count too). The app keeps a record of every such word: how often it was asked and how often it was wrong (`gds.daily.seen`). Recap answers update that record but never add words to it.
 

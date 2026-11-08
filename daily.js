@@ -23,6 +23,7 @@ const DAILY_WRITTEN_ROUNDS = 1;       // times each word is asked in writing
 const DAILY_EXTRA_ASKS_PER_MISS = 2;  // extra asks added by every wrong answer
 const DAILY_TENSES = ["present"];     // tenses used for verbs; add "past_perfect", "imperfect", "future" to widen
 const DAILY_MAX_IN_QUEUE = 3;         // a word never waits in the queue more than this many times
+const DAILY_MIN_NEW_WORDS = 4;        // words never asked before in your first Daily 10 of the day
 const DAILY_FREE_MISS_WINDOW = 7;     // at most one missed day in any 7 days
 
 const LS_DAILY_HISTORY = "gds.daily.history";
@@ -235,6 +236,8 @@ function dailyBuildContext() {
     dailyMapAdd(itToNl, dailyNorm(it), nl);
     for (const tok of dailyTokens(it)) dailyMapAdd(itToNl, dailyNorm(tok), nl);
     dailyMapAdd(nlToIt, dailyNorm(nl), it);
+    // "zij/u" also answers a prompt of just "zij"
+    for (const tok of dailyTokens(nl)) dailyMapAdd(nlToIt, dailyNorm(tok), it);
   };
 
   for (const e of entries) {
@@ -243,6 +246,9 @@ function dailyBuildContext() {
     if (e.kind === "verb") {
       dailyMapAdd(verbItToNl, dailyNorm(p.other), p.dutch);
       dailyMapAdd(verbNlToEntries, dailyNorm(p.dutch), e);
+      // the infinitive also counts when a plain word is asked in Dutch
+      // ("zijn" -> suo AND essere)
+      addVariant(p.other, p.dutch);
     } else {
       addVariant(p.other, p.dutch);
       if (e.hasPlural) addVariant(p.otherPl, p.dutchPl);
@@ -285,6 +291,33 @@ function dailyPickWords(entries, rng, count) {
     if (!list.length) setIds.splice(si, 1);
   }
   return picked;
+}
+
+// Words that have never been asked in a Daily game, one per lemma.
+function dailyFreshEntries(ctx, seenRec) {
+  const seenLemmas = new Set(ctx.entries.filter(e => seenRec[e.key]).map(e => e.lemma));
+  return ctx.entries.filter(e => !seenLemmas.has(e.lemma));
+}
+
+// How many new words are left (counted per word, not per deck entry).
+function dailyFreshCount(ctx, seenRec) {
+  return new Set(dailyFreshEntries(ctx, seenRec).map(e => e.lemma)).size;
+}
+
+// First Daily game of the day: at least DAILY_MIN_NEW_WORDS words that were
+// never asked before (as long as that many are left), the rest from all
+// words, new ones included. Same fair-per-deck draw as dailyPickWords.
+function dailyPickWithNew(ctx, seenRec, rng, count) {
+  const fresh = dailyFreshEntries(ctx, seenRec);
+  const newPart = dailyPickWords(fresh, rng, DAILY_MIN_NEW_WORDS);
+  const taken = new Set(newPart.map(e => e.lemma));
+  const rest = dailyPickWords(ctx.entries.filter(e => !taken.has(e.lemma)), rng, count - newPart.length);
+  return [...newPart, ...rest];
+}
+
+function dailyNewWordsWarning(left) {
+  const what = left === 0 ? "No new words are left" : `Only ${left} new word${left === 1 ? " is" : "s are"} left`;
+  return `${what}. Add more words or update the app, so your first Daily 10 each day can have ${DAILY_MIN_NEW_WORDS} new words.`;
 }
 
 /* ============================================================
@@ -495,6 +528,13 @@ function dailyBuildChoices(entry, form, ctx) {
   const poolKey = entry.kind === "plain" ? "plain:" + entry.setId : entry.kind;
 
   const taken = new Set(form.nlOptions.map(dailyNorm));
+  // a word like "sei" is six AND "you are": the other reading must never
+  // show up as a wrong option next to the right one
+  if (!form.person) {
+    for (const m of verbFormMeanings(form.itQuestion)) {
+      for (const t of dailyTokens(m)) taken.add(dailyNorm(t));
+    }
+  }
   const wrong = [];
 
   const dutchFor = (cand) => {
@@ -622,7 +662,16 @@ function dailyStart({ practice = false, mode = "daily" } = {}) {
       return;
     }
   } else {
-    picked = dailyPickWords(daily.ctx.entries, dailySeededRng("gds-daily:" + seed), DAILY_WORD_COUNT);
+    const rng = dailySeededRng("gds-daily:" + seed);
+    const firstOfDay = !dailyLoadHistory().includes(today);
+    if (firstOfDay) {
+      const seenRec = dailyLoadSeen();
+      picked = dailyPickWithNew(daily.ctx, seenRec, rng, DAILY_WORD_COUNT);
+      const left = dailyFreshCount(daily.ctx, seenRec);
+      if (left < DAILY_MIN_NEW_WORDS) toast(dailyNewWordsWarning(left));
+    } else {
+      picked = dailyPickWords(daily.ctx.entries, rng, DAILY_WORD_COUNT);
+    }
     if (!picked.length) {
       toast("No Italian words to practise yet");
       return;
@@ -826,11 +875,11 @@ function renderRecapHome() {
     status.textContent = "Locked";
     start.hidden = true;
     fresh.hidden = true;
-    info.textContent = `Play the Daily 10 first. The recap only uses words you have met there: ${met} of ${RECAP_MIN_WORDS} so far.`;
+    info.textContent = `Unlocks after ${RECAP_MIN_WORDS} words in the Daily 10: ${met} so far.`;
     return;
   }
 
-  info.textContent = `Ten words from the ${met} you have met in the Daily 10. Words you miss more often come up more often.`;
+  info.textContent = "";
   fresh.hidden = false;
 
   if (stats.playedToday) {
@@ -863,6 +912,11 @@ function renderDailyHome() {
   practice.textContent = "Get 10 new words";
 
   status.className = "daily-status";
+
+  const note = dEl("dh-note");
+  const left = dailyFreshCount(dailyBuildContext(), dailyLoadSeen());
+  note.hidden = left >= DAILY_MIN_NEW_WORDS;
+  note.textContent = note.hidden ? "" : dailyNewWordsWarning(left);
 
   if (stats.playedToday) {
     status.textContent = "Done for today ✓";
@@ -960,6 +1014,20 @@ function dailyRenderQuestion() {
   }
 }
 
+// every accepted answer for the question on screen, for the feedback line
+function dailyAllAnswers(f, isMc) {
+  const out = [];
+  const add = (x) => { if (x && !out.some(o => dailyNorm(o) === dailyNorm(x))) out.push(x); };
+  if (isMc) {
+    f.nlOptions.forEach(add);
+    if (!f.person) verbFormMeanings(f.itQuestion).forEach(m => dailyTokens(m).forEach(add));
+  } else {
+    // alternates ("faccio/fo") are already separate entries; the pronoun goes in front
+    f.itAnswers.forEach(a => dailyTokens(a).forEach(t => add(f.person ? `${f.person} ${t}` : t)));
+  }
+  return out;
+}
+
 function dailyRenderAnswer(ok, given) {
   const s = daily.session;
   const f = s.form;
@@ -969,14 +1037,13 @@ function dailyRenderAnswer(ok, given) {
   const feedback = dEl("d-feedback");
   let message;
 
+  // every accepted answer is shown, e.g. "zijn" = suo / essere
+  const alts = dailyAllAnswers(f, isMc);
   if (ok) {
-    message = "Correct!";
+    message = alts.length > 1 ? `Correct!\nAll correct answers: ${alts.join(" / ")}` : "Correct!";
   } else {
-    const answer = isMc
-      ? f.nlOptions.join(" / ")
-      : (f.person ? `${f.person} ${f.itAnswers[0]}` : f.itAnswers[0]);
     const n = DAILY_EXTRA_ASKS_PER_MISS;
-    message = `Not quite — ${answer}\nComing back ${n} more time${n === 1 ? "" : "s"}.`;
+    message = `Not quite — ${alts.join(" / ")}\nComing back ${n} more time${n === 1 ? "" : "s"}.`;
   }
   feedback.textContent = message;
   feedback.className = "feedback-text " + (ok ? "correct" : "wrong");
