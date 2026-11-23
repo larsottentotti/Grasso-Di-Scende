@@ -41,6 +41,7 @@ const DAILY_KEYS = {
 
 /* ---- Recap: how words are chosen ---- */
 const RECAP_MIN_WORDS = 10;           // the recap unlocks once this many words have been in the Daily game
+const RECAP_LONGEST_UNSEEN = 3;       // of the 10 recap words, this many are the ones not asked for the longest time
 const RECAP_STRUGGLE_WEIGHT = 4;      // a word's score = 1 + this x (its share of wrong answers)
 
 const DAILY_KIND_ORDER = { verb: 0, noun: 1, plain: 2 };
@@ -339,7 +340,7 @@ function dailySaveSeen(obj) {
 
 // Called after every answer. A word enters the record the first time the
 // DAILY game asks it. Recap answers only update words already in the record.
-//   a = times asked, w = times answered wrong, d = first date
+//   a = times asked, w = times answered wrong, d = first date, l = last time asked (ms)
 function dailyNoteAnswer(entryKey, ok, mode, today) {
   const seen = dailyLoadSeen();
   let r = seen[entryKey];
@@ -349,6 +350,7 @@ function dailyNoteAnswer(entryKey, ok, mode, today) {
   }
   r.a += 1;
   if (!ok) r.w += 1;
+  r.l = dailyClock().getTime();      // last time this word was asked (Daily or Recap)
   dailySaveSeen(seen);
 }
 
@@ -373,12 +375,31 @@ function recapPool(ctx, seen) {
   return [...best.values()];
 }
 
-// Draws `count` different words, one at a time. A word's chance in each
-// draw = its score / the total score of the words still in the pool.
+// When a word was last asked: `l` (ms) if known, else its first date.
+function recapLastSeen(rec) {
+  if (rec && Number.isFinite(rec.l)) return rec.l;
+  const t = Date.parse(rec && rec.d);
+  return Number.isFinite(t) ? t : 0;
+}
+
+// The 10 recap words:
+//  1. the RECAP_LONGEST_UNSEEN words (3) that were asked the longest time
+//     ago (ties are broken at random);
+//  2. the rest are drawn one at a time. A word's chance in each draw =
+//     its score / the total score of the words still in the pool.
 function recapPickWords(ctx, seen, rng, count) {
   const pool = recapPool(ctx, seen)
     .sort((a, b) => (a.entry.key < b.entry.key ? -1 : 1));   // fixed order -> same pick for the same seed
   const picked = [];
+
+  const oldest = pool
+    .map(p => ({ p, t: recapLastSeen(seen[p.entry.key]), tie: rng() }))
+    .sort((x, y) => x.t - y.t || x.tie - y.tie)
+    .slice(0, Math.min(RECAP_LONGEST_UNSEEN, count));
+  for (const o of oldest) {
+    pool.splice(pool.indexOf(o.p), 1);
+    picked.push(o.p.entry);
+  }
 
   while (picked.length < count && pool.length) {
     const total = pool.reduce((sum, p) => sum + p.weight, 0);
@@ -1163,6 +1184,8 @@ function initDaily() {
 
   dEl("d-back").addEventListener("click", () => showView("view-setup"));
   dEl("dd-back").addEventListener("click", () => showView("view-setup"));
+  dEl("dd-menu").addEventListener("click", () => showView("view-setup"));
+  dEl("dd-menu-bottom").addEventListener("click", () => showView("view-setup"));
 
   dEl("d-next").addEventListener("click", dailyAdvance);
   dEl("d-intro-btn").addEventListener("click", dailyBeginWritten);

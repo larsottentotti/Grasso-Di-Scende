@@ -96,6 +96,7 @@ A daily game on the home screen. Each day it picks 10 words from all Italian dec
 - **Total played** (4th block next to the streak, year and 30-day blocks) counts every finished game, extra sets included.
 - **New words:** the first Daily 10 of the day always contains at least 4 words that were never asked in a Daily game before (`DAILY_MIN_NEW_WORDS`). When fewer than 4 new words are left, a red note on the Daily card says so, so you can add words or update the app; the game then uses all the new words that remain.
 - **Words with several meanings:** a word like `sei` (six / you are) never shows both readings as options in multiple choice. In writing, every accepted translation counts (`zijn` = suo or essere, `zij` = lei or loro), and after each answer the screen lists all correct answers. The same goes for the normal study mode.
+- After a game, the results screen has a "Back to main menu" button at the top and at the bottom.
 - An unfinished game is saved; closing the app and reopening continues where you stopped.
 - Tunable numbers sit at the top of `daily.js`.
 - Plurals come from the `dutchPl`/`otherPl` fields in `vocab.json`. Imported decks are asked in the singular only.
@@ -112,7 +113,7 @@ A second game under the Daily card, with its own streak, year/30-day counters, t
 
 **Which words?** Only words that have already been asked in the Daily 10 (its "new words" games count too). The app keeps a record of every such word: how often it was asked and how often it was wrong (`gds.daily.seen`). Recap answers update that record but never add words to it.
 
-**How are the 10 chosen?** Every word gets a score `1 + 4 x (wrong answers / times asked)`, so between 1 (never wrong) and 5 (always wrong); half wrong = 3. The 10 words are drawn one at a time: in each draw a word's chance is its score divided by the total score of the words still left. Hard words come up more often, easy words can still be picked, and a word is never picked twice in one game. The numbers sit at the top of `daily.js` (`RECAP_MIN_WORDS`, `RECAP_STRUGGLE_WEIGHT`).
+**How are the 10 chosen?** Two steps. (1) 3 words are the ones that were asked the longest time ago (the app stores when each word was last asked, in the Daily or the Recap; ties are broken at random). (2) The other 7 are drawn from the remaining words: every word gets a score `1 + 4 x (wrong answers / times asked)`, so between 1 (never wrong) and 5 (always wrong). The words are drawn one at a time, a word's chance in each draw being its score divided by the total score of the words still left. Hard words come up more often, easy words can still be picked, and a word is never picked twice in one game. The numbers sit at the top of `daily.js` (`RECAP_MIN_WORDS`, `RECAP_LONGEST_UNSEEN`, `RECAP_STRUGGLE_WEIGHT`). Words saved before this update have no "last asked" time yet, so their first date is used until they are asked again.
 
 The Recap unlocks once at least 10 different words have been in the Daily 10. Words whose entry was changed in a deck update are no longer recognised and drop out of the record.
 

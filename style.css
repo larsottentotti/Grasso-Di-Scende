@@ -770,3 +770,6 @@ input[type="file"] {
 .how p { margin: 8px 0 0; line-height: 1.45; }
 
 .daily-note { margin: 4px 0 10px; color: var(--wrong); font-weight: 600; }
+
+#dd-menu, #dd-menu-bottom { margin-top: 14px; }
+#dd-menu-bottom { margin-bottom: 24px; }
